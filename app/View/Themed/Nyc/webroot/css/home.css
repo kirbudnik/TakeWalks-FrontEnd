@@ -1,0 +1,194 @@
+
+/* Hero section */
+.hero {
+	position: relative;
+	overflow: hidden;
+	background: black url('../video/broll.jpg') no-repeat center center;
+	-moz-background-size: cover;	
+	background-size: cover;	
+}
+.hero video {
+	width: 100%;
+	background: url('../video/broll.jpg') no-repeat center center;
+	-moz-background-size: cover;	
+	background-size: cover;
+	z-index: 1;
+}
+.heroContent {
+	position: absolute;
+	z-index: 2;
+	top: 0; right: 0; left: 0;
+	padding: 2rem 1rem 4rem;
+	text-align: center;
+	color: white;
+}
+.heroContent h1,
+.heroContent p {
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; 
+}
+.heroContent h1 {
+	font-size: 4.6875rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 1;
+}
+@media (min-width: 52rem){
+	.heroContent {
+		padding: 10rem 1rem;
+	}
+	.heroContent h1 {
+		font-size: 6.875rem;
+	}
+}
+.heroContent p {
+	line-height: 2;
+}
+.heroContent .button {
+	display: inline-block;
+	margin: 1rem auto 0;
+	padding: 0.75rem 2rem 0.75rem 4rem;
+	background-image: url('../img/map-blue.png');
+	background-repeat: no-repeat;
+	background-position: 2rem center;
+}
+
+/* Selling Points */
+
+.sellingPoints {
+	text-align: center;
+	background: #fafafa;
+	border-bottom: 1px solid #eee;
+}
+.sellingPoints li {
+	display: block;
+	padding: 4.5rem 2rem 1rem;
+	background-position: center 0.5rem;
+	background-repeat: no-repeat;
+}
+@media (min-width: 40rem){
+	.sellingPoints li {
+		float: left;
+		width: 33.333%;
+	}
+}
+.sellingPoints li:first-child { background-image: url('../img/people-blue.png'); }
+.sellingPoints li + li { background-image: url('../img/buildings-blue.png'); }
+.sellingPoints li + li + li { background-image: url('../img/guide-blue.png'); }
+.sellingPoints li:first-child:hover { background-image: url('../img/people-pink.png'); }
+.sellingPoints li + li:hover { background-image: url('../img/buildings-pink.png'); }
+.sellingPoints li + li + li:hover { background-image: url('../img/guide-pink.png'); }
+
+.sellingPoints h3 {
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+/* Section titles */
+section > h2 {
+	margin: 1rem 0;
+}
+section > h2 > span {
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #338dfb;
+	margin-right: 2rem;
+}
+section > h2 .more {
+	display: inline-block;
+	vertical-align: middle;
+	color: #323531;
+	font-weight: 600;
+	text-transform: none;
+}
+section > h2 .more span {
+	color: #f545a3;
+	font-weight: 600;
+}
+
+@media (min-width: 62.5rem){
+	/* Featured section */
+	.featured {
+		padding-top: 2rem;
+	}
+	.tours.two-thirds {
+		float: left;
+		width: 66.666%;
+	}
+	.tours.two-thirds .half {
+		width: 49%;
+		float: left;
+		margin-right: 1%;
+	}
+	.tours.two-thirds .half + .half {
+		margin-right: 0;
+		margin-left: 1%;
+		clear: none;
+	}
+	.tours.one-third {
+		float: left;
+		width: 33.333%;
+		padding-left: 1rem;
+	}
+}
+
+/* Everybody's talking about us */
+
+.tours > li.talking {
+	background: white;
+	height: auto;
+	box-shadow: none;
+	text-align: center;
+}
+.tours .talking h3 {
+	padding-top: 2rem;
+	color: #338dfb;
+	text-transform: uppercase;
+	text-shadow: none;
+	width: auto;
+}
+.tours .talking ul {
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 1rem 0;
+	border-bottom: 1px solid #d8d8d8;
+	display: inline-block;
+	margin: 1rem 0.5rem;
+	text-align: left;
+	width: 18rem;
+}
+@media (min-width: 62.5rem){
+	.tours .talking h3 {
+		width: 18rem;
+	}
+	.tours .talking ul {
+		display: block;
+		margin: 0 auto;
+	}
+}
+.tours .talking li {
+	display: inline-block;
+	white-space: normal;
+	padding: 0 6px 0 0;
+	margin: 0 6px 0 0;
+	width: 18rem;
+}
+.tours .talking li a {
+	color: #323531;
+}
+.tours .talking li a:hover {
+	color: #338dfb;
+}
+.talking cite {
+	display: block;
+	font-weight: 600;
+	text-align: right;
+}
+.talking cite:before {
+	content: '— ';
+}
+.talking .logos li {
+	text-align: center;
+}
+.talking .logos img {
+    max-height: 150px;
+}

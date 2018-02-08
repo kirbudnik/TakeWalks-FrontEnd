@@ -1,0 +1,108 @@
+$table-side: 40px;
+$table-side-compact: 20px;
+$td-vert: 18px;
+$td-vert-compact: 12px;
+$th-vert: 24px;
+$th-vert-compact: 16px;
+
+table {
+  width: 100%;
+
+  &.upcoming-tours {
+    border-collapse: separate;
+    border-spacing: 0 17px;
+
+    th,
+    td {
+      color: $label-grey;
+    }
+
+    th {
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: left;
+      @include compact-font(17px, 15px);
+      @include compact-padding($th-vert, $table-side, $th-vert-compact, $table-side-compact);
+    }
+
+    td {
+      @include compact-font(24px, 18px);
+      @include compact-padding($td-vert, $table-side, $td-vert-compact, $table-side-compact);
+      font-weight: 300;
+    }
+
+    tbody {
+      tr {
+        background-color: #fff;
+        transition: box-shadow 200ms ease;
+
+        td {
+          &:first-child {
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+          }
+
+          &:last-child {
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            text-align: right;
+          }
+        }
+
+        &:hover {
+          box-shadow: 0px 4px 22px 0px rgba(0,0,0,.07);
+        }
+      }
+
+      span {
+        font-style: italic;
+        font-size: 18px;
+        color: #8b9aa2;
+        display: block;
+      }
+    }
+
+    &.compact {
+      th {
+        text-align: left;
+        @include compact-font(17px, 15px);
+        @include compact-padding(16px, 15px, 10px, 10px);
+      }
+
+      td {
+        text-align: left;
+        @include compact-font(20px, 16px);
+        @include compact-padding(16px, 15px, 10px, 10px);
+      }
+
+      a.normal {
+        @include cf(16px, 16px);
+
+        &:hover {
+          color: $brand-purple;
+        }
+      }
+
+      .btn {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 17px;
+      }
+
+      @include max-width($mobile) {
+        th,
+        td {
+          padding: 5px;
+          font-size: 15px;
+          text-align: center;
+        }
+
+        th {
+          &:last-child {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}

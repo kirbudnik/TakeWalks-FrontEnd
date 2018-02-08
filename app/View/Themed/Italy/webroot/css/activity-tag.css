@@ -1,0 +1,820 @@
+.bxs-border-box,
+.bxs-border-box * {
+  box-sizing: border-box;
+}
+
+a.red-btn {
+  background: #7b0100;
+  color: #fff;
+  height: 41px;
+  line-height: 41px;
+  border: 1px solid #fff;
+  padding: 0 22px;
+  display: inline-block;
+}
+
+a.red-btn .fa {
+  color: #fff;
+  margin-right: 10px;
+}
+
+a.red-btn:hover {
+  text-decoration: none;
+  background-color: #fff;
+  border-color: #7b0100;
+  color: #7b0100;
+}
+
+a.red-btn:hover .fa {
+  color: #7b0100;
+}
+
+.content.no-top-padding {
+  padding-top: 0;
+}
+
+.page-title-area {
+  background-image: url(/theme/Italy/img/hs1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.page-title-overlay{
+  background: rgba(0,0,0,.6);
+}
+
+@media screen and (min-width: 1024px) {
+  .page-title-area {
+
+  }
+}
+
+.title-wrap {
+  overflow: hidden;
+}
+
+.tag-page-title-text {
+  width: 50%;
+  margin-right: 10%;
+  float: left;
+}
+
+.tag-page-title-slider {
+  width: 40%;
+  float: left;
+  margin-top: 30px;
+}
+
+.tag-page-title,
+.tag-page-description,
+.tag-page-description * {
+  color: #fff;
+}
+
+.tag-page-title {
+  font-size: 35px;
+  margin-bottom: 30px;
+  margin-top: 18px;
+  text-transform: uppercase;
+}
+
+.tag-page-description p {
+  font-family: 'Open Sans';
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.tag-anchors {
+  background-color: #7b0100;
+}
+
+.tag-anchors-inner {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  overflow: hidden;
+}
+
+.tag-anchor-item {
+  line-height: 48px;
+  background-color: #7b0100;
+  display: block;
+  float: left;
+  width: 25%;
+  text-align: center;
+  border-right: 1px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Open Sans';
+  font-size: 17px;
+}
+
+.tag-anchors-inner .tag-anchor-item:last-child {
+  border-right: none;
+}
+
+.tag-upcoming-nav {
+  background-color: #a08f56;
+  overflow: hidden;
+  padding-left: 13%;
+}
+
+.upcoming-nav-item {
+  display: block;
+  float: left;
+  width: 20%;
+  margin-right: 1%;
+}
+
+.upcoming-nav-item.label {
+  line-height: 53px;
+  color: #fff;
+  font-size: 17px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+
+.upcoming-nav-item.input {
+  line-height: 53px;
+}
+
+.upcoming-nav-item.input input {
+  max-width: 100%;
+  font-size: 16px;
+  top: 2px;
+}
+
+.upcoming-nav-item.nav-btn {
+  border: 1px solid #fff;
+  line-height: 39px;
+  margin-top: 7px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.upcoming-nav-item.nav-btn:hover {
+  opacity: 0.7;
+}
+
+.upcoming-tours-table {
+  font-family: 'Open Sans';
+  margin-top: 30px;
+}
+
+.upcoming-tours-table th {
+  color: #7b0100;
+  font-size: 22px;
+  padding: 20px 0;
+  border: none;
+  font-weight: 400;
+  font-family: 'Constantia';
+  text-transform: uppercase;
+}
+
+.upcoming-tours-table tbody {
+  color: #252525;
+}
+
+.upcoming-tours-table tr {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.upcoming-tours-table tr b {
+  color: #7b0100;
+}
+
+.upcoming-tours-table td {
+  padding: 14px 0;
+  border: none;
+  font-size: 15px;
+}
+
+.upcoming-tours-table tr td:nth-child(2) {
+  font-weight: 600;
+  width: 35%;
+}
+.upcoming-tours-table tr td:last-child {
+  text-align: right;
+}
+.upcoming-tours-table th.right, td.right {
+  text-align: right;
+}
+
+.tag-similar-tours {
+  background-image: url(/theme/Italy/img/tag-similar-tours.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sim-tour {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 45px;
+}
+
+.tour-img {
+  width: 32%;
+  margin-bottom: 0;
+}
+
+.tour-img .slick-list,
+.tour-img .slick-track {
+  height: 100%;
+
+  /** ugly safari fix **/
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0
+
+}
+
+.tour-data {
+  width: 68%;
+}
+
+.tour-data {
+  background-color: #fff;
+  padding: 20px 0 0 0;
+}
+
+.tour-data > * {
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.tour-title {
+  margin: 0;
+  font-family: 'Constantia';
+  text-transform: uppercase;
+}
+
+.tour-title a{
+  font-size: 25px;
+  font-weight: 400;
+  border: none;
+}
+
+.tour-title a:hover{
+  background: none;
+  border: none;
+  color: #7b0100;
+  text-decoration: underline;
+}
+
+.tour-descr {
+  font-family: 'Open Sans';
+  color: #000;
+  font-size: 14px;
+  margin: 16px 0 0;
+}
+
+.tour-img .slick-next {
+  right: 10px;
+  font-size: 26px;
+}
+
+.tour-img .slick-prev {
+  left: 10px;
+  font-size: 26px;
+}
+
+.tour-img .slick-next:before {
+  content: "\f054" !important;
+  opacity: 1;
+}
+
+.tour-img .slick-prev:before {
+  content: "\f053" !important;
+  opacity: 1;
+}
+
+.tour-img .slick-next:before,
+.tour-img .slick-prev:before {
+  font-size: 26px;
+  font-family: FontAwesome;
+}
+
+.tour-facts {
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+  padding-bottom: 15px;
+}
+
+.tour-facts > * {
+  display: table-cell;
+  vertical-align: middle;
+  padding-right: 15px;
+}
+
+.tour-facts > *.tour-price {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.tour-facts i {
+  color: #a08f56;
+  font-size: 16px;
+}
+
+.tour-facts span {
+  display: inline-block;
+  margin-left: 7px;
+}
+
+.tour-facts {
+  font-size: 14px;
+  color: #7d7d7d;
+}
+
+.tour-price {
+  font-size: 40px;
+  font-family: 'Constantia';
+  color: #611906;
+}
+
+.tour-price span {
+  color: #000;
+  font-size: 10px;
+  display: block;
+}
+
+.tour-data .link-a {
+  background-color: #fff;
+}
+
+.sites-visited {
+  display: table;
+  width: 100%;
+  background-color: #a08f56;
+  margin-top: 15px;
+  padding: 11px 20px 11px 30px;
+}
+
+.sites-visited > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.sites-visited > *.header {
+  vertical-align: top;
+  color: #fff;
+  font-size: 13px;
+}
+
+.sites-visited .list {
+  width: 60%;
+}
+
+.sites-visited .list ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.sites-visited li {
+  margin-bottom: 2px;
+  font-size: 12px;
+  color: #fff;
+  width: 50%;
+  float: left;
+  padding-left: 18px;
+  padding-right: 5px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .sites-visited li {
+    /*white-space: nowrap;*/
+    overflow: hidden;
+    /*text-overflow: ellipsis;*/
+    width: 180px;
+  }
+}
+
+.sites-visited li .fa {
+  margin-right: 7px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.tab-togglers {
+  overflow: hidden;
+}
+
+.tag-tab-toggler {
+  width: 20%;
+  float: left;
+  color: #111111;
+  font-size: 17px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid transparent;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.tag-tab-toggler.active {
+  border-bottom-color: #a08f56;
+  color: #7b0100;
+}
+
+.tag-tab-toggler .img {
+  margin-bottom: 32px;
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 1px solid #9e8e5a;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.tag-tab-target {
+  font-size: 15px;
+  color: #111111;
+  font-family: 'Open Sans';
+  background-color: #f7f7f7;
+  position: relative;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  height: 0;
+  transition: opacity 300ms ease,
+              z-index 300ms ease,
+              pointer-events 300ms ease,
+              height 300ms ease;
+  padding: 0;
+}
+
+.tag-tab-target p {
+  font-size: 15px;
+}
+
+.tag-tab-target.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+  height: auto;
+  padding: 32px 25px;
+}
+
+.tab-target-img {
+  position: absolute;
+  width: 30%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.tab-target-img.tab1 {
+  background-image: url(/theme/Italy/img/tabs/tabc1.jpg);
+  background-position: 100%;
+}
+
+.faq-grey {
+  background-color: #f7f7f7;
+}
+
+.faq-questions .tag-question:first-child {
+  border-top: 1px solid #a08f56;
+}
+
+.tag-question {
+  border-bottom: 1px solid #a08f56;
+}
+
+.tag-question-title {
+  font-family: 'Open Sans';
+  color: #000000;
+  font-size: 15px;
+  position: relative;
+  padding: 14px 0;
+  cursor: pointer;
+  transition: color 250ms ease;
+  padding-right: 38px;
+}
+
+.tag-question-title p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.tag-question-title:hover,
+.tag-question-title:hover .fa {
+  color: #7b0100;
+}
+
+.tag-question-title .fa {
+  color: #a08f56;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: color 250ms ease;
+}
+
+.tag-question-title .fa:before {
+  content: "\f078";
+}
+
+.tag-question.active .tag-question-title .fa:before {
+  content: "\f077";
+}
+
+.tag-question-answer {
+  display: none;
+  margin-top: 8px;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-bottom: 25px;
+
+}
+.tag-question-answer  p{
+  font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .sim-tour {
+    flex-direction: column;
+  }
+
+  .tour-img {
+    width: 100%;
+    height: 300px;
+  }
+
+  .tour-data {
+    width: 100%;
+  }
+
+  .tag-page-title-text,
+  .tag-page-title-slider {
+    width: 100%;
+    margin-right: 0;
+    float: none;
+  }
+
+  .upcoming-nav-item {
+    width: 49%;
+    margin-bottom: 9px;
+  }
+  .tag-tab-toggler {
+    width: 100%;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .tag-tab-toggler .img {
+    border-radius: 0;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 6px;
+  }
+  a.red-btn{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .tag-upcoming-nav {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .page-title-area {
+    background-position: 30%;
+  }
+
+  .tour-facts {
+    display: block;
+    overflow: hidden;
+    margin-top: 15px;
+    position: relative;
+    padding-bottom: 60px;
+  }
+
+  .tour-facts > * {
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: left;
+    margin-bottom: 9px;
+  }
+
+  .tour-data > * {
+    padding-left: 12px;
+  }
+
+  .tour-facts > .tour-reviews {
+    width: 50%;
+  }
+
+  .tour-facts .tour-price {
+    text-align: right;
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+  }
+
+  .sites-visited {
+    display: block;
+    overflow: hidden;
+    margin-top: 0;
+  }
+
+  .sites-visited > * {
+    display: block;
+  }
+
+  .sites-visited > *.list {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .sites-visited > *.header {
+    width: 100%;
+  }
+
+  .sites-visited > *.btn {
+    width: 100%;
+    display: block;
+    margin-top: 8px;
+  }
+
+  .sites-visited > *.btn a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .tag-anchor-item {
+    width: 50%;
+  }
+
+  .tag-anchors-inner .tag-anchor-item:nth-child(2) {
+    border-right: none;
+    border-bottom: 1px solid #fff;
+  }
+
+  .tag-anchors-inner .tag-anchor-item:first-child {
+    border-bottom: 1px solid #fff;
+  }
+
+  .tag-tab-toggler .img {
+    height: 50px;
+  }
+
+  .tag-tab-target.active {
+    padding: 14px 10px;
+  }
+
+  .upcoming-tours-table th {
+    font-size: 17px;
+    padding-right: 5px;
+  }
+
+  .upcoming-tours-table td {
+    padding-right: 3px;
+    padding-left: 2px;
+  }
+
+  .tag-page-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    padding-bottom: 24px !important;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .tour-facts div span {
+    display: block;
+    margin-left: 0;
+  }
+} 
+
+@media screen and (min-width: 768px) {
+  .tour-facts > * {
+    min-width: 80px;
+  }
+}
+
+@media screen and (max-height: 900px) and (min-height: 650px) {
+  .no-mobile .page-title-overlay {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .no-mobile .page-title-area .no-top-padding {
+    padding-bottom: 10%;
+  }
+
+  .no-mobile .tag-page-title-text {
+    margin-right: 10%;
+  }
+
+
+  .no-mobile .tag-page-title-slider {
+    width: 40%;
+  }
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -15px;
+
+    display: block;
+
+    width: 50px;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-dots li
+{
+    position: relative;
+    background: transparent;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    padding: 0;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+    border: 1px solid #fff;
+    width: 8px;
+    height: 8px;
+    padding: 3px;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    color: transparent;
+    outline: none;
+    background-color: transparent;
+}
+.slick-dots li button:before {
+  display: none !important;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #fff;
+}
+
+
+/* DatePicker */
+.ui-datepicker { margin: 9px -15px 12px; padding: 10px 13px 13px; background: #b3a578; }
+.ui-datepicker table { margin: 0; }
+.ui-datepicker-header { position: relative; padding: 0 0 6px; }
+.ui-datepicker-title { display: block; padding: 0 20px; font-size: 16.67px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; text-align: center; text-transform: uppercase; }
+.ui-datepicker-prev, .ui-datepicker-next { display: block; overflow: hidden; position: absolute; top: 2px; width: 13px; height: 19px; background: url(/theme/Italy/img/sprite-a.png) -3000em -3000em no-repeat; text-indent: -3000em; text-align: left; }
+.ui-datepicker-prev { left: 2px; background-position: -286px 0; }
+.ui-datepicker-next { right: 2px; background-position: -300px 0; }
+.ui-datepicker-calendar th { padding: 0; border: 2px solid #b3a578; color: #fff; font-size: 8.33px; font-family: 'Open Sans', Arial, Helvetica, sans-serif; text-align: center; text-transform: uppercase; }
+.ui-datepicker-calendar td { padding: 0; border: 2px solid #b3a578; }
+.ui-datepicker-calendar td > * { display: block; position: relative; width: 30px; height: 30px; background: #d9d2bc; text-align: center; }
+/*.ui-datepicker-calendar td.ui-datepicker-today > * { background: #cd604f; }*/
+.ui-datepicker-calendar td > .ui-state-active { background: #a3cf64;  }

@@ -1,0 +1,47 @@
+
+
+
+
+/* Main text */
+main {
+	padding: 2rem 0;
+}
+@media (min-width: 53rem){
+	main {
+		margin-right: 26rem;
+	}
+}
+main h3 {
+	color: #338dfb;
+	font-weight: 800;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+main p,
+main dl {
+	margin-bottom: 1rem;
+}
+
+main dt,
+main dd {
+	display: inline;
+	line-height: 2;
+}
+main dt {
+	color: #676866;
+}
+main dd {
+	font-weight: 600;
+	margin-left: 0.5rem;
+}
+main dd:after {
+	content:'';
+	display: block;
+}
+
+main form label {
+	display: block;
+	margin: 1rem 0;
+}
+main form input[type="submit"]{
+	padding: 0.5rem 1rem;
+}

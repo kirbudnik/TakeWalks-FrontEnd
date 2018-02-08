@@ -1,0 +1,324 @@
+/* Sidebar */
+aside {
+    padding: 1rem 0 0;
+}
+@media (min-width: 53rem){
+    aside {
+        padding: 4rem 0;
+        width: 24rem;
+        float: left;
+    }
+}
+
+aside > div , aside > article{
+    background: #FAFAFA;
+    padding: 0.5rem;
+    margin-top: 1.5em;
+}
+
+aside > div .close,
+aside > article .close{
+    float: right;
+    cursor: pointer;
+    margin-top: -0.6rem;
+}
+
+aside h3 {
+    color: #338DFB;
+    font-weight: 800;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+aside .timeslot {
+    color: #676866;
+    padding: 0 0 0.5rem;
+}
+
+aside .ticketsSummary li {
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    clear: right;
+    border-top: 1px solid #EEE;
+}
+aside .ticketsSummary li:first-child {
+    border-top: none;
+}
+aside .ticketsSummary li.subtotal {
+    border-top: 0.2rem solid #ddd;
+    padding: 0 0 0 0.5rem;
+    line-height: 2;
+}
+aside .ticketsSummary span {
+    float: right;
+    padding: 0 0.5rem;
+}
+aside .ticketsSummary span.free {
+    color: #46cb39;
+}
+aside .ticketsSummary li.subtotal span {
+    background: #ddd;
+    font-weight: 600;
+}
+
+aside .ticketsSummary.total li:last-child {
+    border-top: 0.2rem solid #338dfb;
+}
+aside .ticketsSummary.total li:last-child span {
+    background: #338dfb;
+    color: white;
+}
+
+.promo {
+    padding: 0.5rem;
+    margin: 0.5rem 0 0;
+}
+.promo.expanded {
+    background: #FAFAFA;
+}
+.promo input {
+    display: none;
+}
+.promo.expanded input {
+    display: block;
+    width: 70%;
+    float: left;
+}
+.promo.expanded input + input {
+    width: 28%;
+    margin-left: 2%;
+    height: 2.2rem;
+}
+.promo label {
+    color: #338dfb;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: -1.5rem;
+}
+.promo.expanded label {
+    margin-top: 0;
+}
+input[name="promo"]{
+    background: white;
+}
+
+/* Main text */
+main {
+    padding: 2rem 0;
+    border-bottom: 1px solid #EEE;
+}
+@media (min-width: 53rem){
+    main {
+        margin-left: 26rem;
+    }
+}
+
+.security {
+    border: 1px solid #338dfb;
+    padding: 1rem 1rem 1rem 4rem;
+    color: #676866;
+    margin: 2rem 0;
+    background: url('../img/security-lock.png') no-repeat 1rem center;
+    -moz-background-size: 2rem auto;
+    background-size: 2rem auto;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+@media (min-width: 53rem){
+    .security {
+        margin: 2rem 0 2rem 2rem;
+    }
+}
+
+main h3 {
+    color: #338dfb;
+    font-weight: 800;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+main p, main form {
+    margin-bottom: 1rem;
+}
+
+/* Payment form */
+main h1 {
+    color: #338dfb;
+    font-weight: 800;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    margin: 1.2rem 0 0;
+    border-bottom: 1px solid #EEE;
+}
+@media (min-width: 53rem){
+    main h1,
+    main form {
+        margin-left: 2rem;
+    }
+}
+main fieldset {
+    margin-top: 2rem;
+}
+main legend {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    margin-bottom: 0.5rem;
+}
+main label,
+main fieldset > div,
+main input[type="submit"],
+main button[type="submit"]{
+    display: block;
+    margin: 0.5rem 0;
+}
+main input,
+main button,
+main fieldset > label,
+main fieldset > div {
+    width: 100%;
+}
+@media (min-width: 30rem){
+    main fieldset > label,
+    main fieldset > div {
+        width: 50%;
+        padding: 0 1rem 0 0;
+        float: left;
+    }
+}
+main fieldset > label span {
+    color: #AAA;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    margin-left: 0.5rem;
+}
+main .terms {
+    background: #FAFAFA;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+main input[type="submit"],
+main button[type="submit"] {
+    padding: 0.5rem;
+    width: 100%;
+}
+@media(min-width: 30rem){
+    main input[type="submit"],
+    main button [type="submit"] {
+        width: auto;
+        margin: 0 auto;
+    }
+}
+
+.ccNo input {
+    background: #fafafa url('../img/icons/cc/credit.png') no-repeat 0.5rem center;
+    -moz-background-size: auto 70%;
+    background-size: auto 70%;
+    padding-left: 3.5rem;
+}
+.ccNo input.Visa, .ccNo input.VisaElectron { background-image: url('../img/icons/cc/visa.png'); }
+.ccNo input.MasterCard { background-image: url('../img/icons/cc/mastercard.png'); }
+.ccNo input.DinersClub, .ccNo input.CarteBlanche { background-image: url('../img/icons/cc/diners.png'); }
+.ccNo input.AmEx { background-image: url('../img/icons/cc/amex.png'); }
+.ccNo input.Discover { background-image: url('../img/icons/cc/discover.png'); }
+.ccNo input.JCB { background-image: url('../img/icons/cc/jcb.png'); }
+.ccNo input.Solo { background-image: url('../img/icons/cc/solo.png'); }
+.ccNo input.Maestro { background-image: url('../img/icons/cc/maestro.png'); }
+.ccNo input.Visa { background-image: url('../img/icons/cc/visa.png'); }
+.ccNo input.LaserCard { background-image: url('../img/icons/cc/laser.png'); }
+.ccNo input.Dankort { background-image: url('../img/icons/cc/dankort.png'); }
+
+.ccCVV input {
+    background: #fafafa url('../img/icons/cc/cvv.png') no-repeat left center;
+    -moz-background-size: auto 70%;
+    background-size: auto 70%;
+    padding-left: 2rem;
+}
+
+@media (min-width: 53rem){
+    .ccNo { width: 70%; }
+    .ccType { width: 30%; }
+    .ccType + div { width: 30%; clear:both;}
+    .ccCVV { width: 30%;  }
+    .ccName { width: 40%; }
+    .address { width: 100%; }
+    .city { width: 40%; }
+    .state { width: 25%; }
+    .zip { width: 35%; }
+}
+.country, .country select { width: 100%; }
+
+
+/* Booking conditions */
+.wrapNotes h3 {
+    color: #338dfb;
+    font-weight: 800;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.wrapNotes p {
+    margin-bottom: 1rem;
+}
+.wrapNotes { display: none; }
+.wrapNotes.expanded {
+    display: block;
+    position: fixed;
+    z-index: 30;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: white;
+    background: rgba(255,255,255,0.8);
+}
+.wrapNotes section {
+    border: 1px solid #338dfb;
+    border-top: none;
+    margin: 0 1rem;
+    padding: 1rem;
+    background: white;
+    max-height: 90%;
+    overflow: auto;
+    animation: flip 0.2s;
+    -webkit-animation: flip 0.2s;
+    -ms-animation: flip 0.2s;
+}
+.wrapNotes section h3 {
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 1rem;
+}
+.wrapNotes section h4 {
+    font-weight: bold;
+    margin: 0 0 0.2rem 0;
+}
+.wrapNotes .close {
+    float: right;
+    cursor: pointer;
+    margin-top: -1rem;
+}
+
+input.error {
+    border: solid 1px red;
+}
+
+/*** currency *****/
+#currencyPicker{
+    padding: 18px 10px;
+}
+#currencyPicker h3{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#currencyPicker .currency{
+    display: inline-block;
+    border: 1px solid #666;
+    width: 14%;
+    padding: 3px 0;
+    text-align: center;
+    margin-right: 5px;
+    cursor: default;
+    letter-spacing: .3px;
+    font-size: 0.9em;
+}
+#currencyPicker .currency:hover{
+    border: 1px solid #998D57;
+    background:#33ADFB;
+    color: white;
+}
+#currencyPicker .currency:active, #currencyPicker .currency.selected{
+    border: 1px solid #532517;
+    background:#338dfb;
+    color: white;
+}

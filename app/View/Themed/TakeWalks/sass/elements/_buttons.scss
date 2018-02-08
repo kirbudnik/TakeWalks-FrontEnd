@@ -1,0 +1,211 @@
+$btn-green: $brand-green;
+$btn-blue: #18a9e2;
+$btn-grey: #c8d0d8;
+$btn-lightgreen: $brand-green;
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #FFF;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px 14px;
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+  transition: all 200ms ease;
+  z-index: 0;
+  letter-spacing: $ls;
+
+  @extend .waves-effect;
+
+  &.primary {
+    padding: 16px 55px;
+    @include cf(30px, 19px);
+    border-radius: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+
+    &.condensed {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+  }
+
+  &.secondary {
+    padding: 17px 40px;
+    border-radius: 25px;
+    font-weight: $med;
+    text-transform: uppercase;
+    @include cf(25px, 17px);
+
+    .icon {
+      @include icon-size(18px);
+      margin-right: 12px;
+    }
+
+    &.more-side {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+
+    &.compact {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+  }
+
+  &.has-icon {
+    .icon {
+      @include icon-size(18px);
+      margin-right: 12px;
+    }
+  }
+
+  &.btn-book-now {
+    background-color: #ddd;
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  &.purple {
+    @include darken-btn($brand-purple);
+  }
+
+  &.blue {
+    @include darken-btn($btn-blue);
+  }
+
+  &.green {
+    @include darken-btn($btn-green);
+    color: #fff;
+  }
+
+  &.grey {
+    @include darken-btn($btn-grey);
+
+    &.green-hover {
+      &:hover {
+        background-color: $brand-green;
+      }
+    }
+  }
+
+  &.reset-calendar {
+    margin: 0 25px;
+    padding: 0 15px !important;
+    > .icon {
+      margin: 0 auto;
+    }
+  }
+
+  &.input-aligned {
+    height: 50px;
+    border-radius: 0;
+    text-align: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    flex: 1 0 auto;
+  }
+
+  &.lcased {
+    text-transform: none;
+  }
+
+  &.facebook {
+    @include darken-btn(#3b5998);
+  }
+
+  &.google {
+    @include darken-btn(#d83f34);
+  }
+
+  &.add-wishlist {
+    .icon {
+      font-size: 21px;
+      position: relative;
+      bottom: 3px;
+    }
+  }
+}
+
+.center-btn {
+  margin-top: 90px;
+  text-align: center;
+
+  &.medium {
+    @include cmt(60px, 35px);
+  }
+
+  &.small {
+    @include cmt(40px, 15px);
+  }
+
+  &.smaller {
+    margin-top: 45px;
+
+    @include max-width($mobile) {
+      margin-top: 15px;
+    }
+  }
+
+  &.double {
+    @include max-width($mobile) {
+      .btn {
+        margin-right: 0;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  div {
+    margin-top: 15px;
+  }
+
+  &.right {
+    margin-top: 0;
+    text-align: right;
+  }
+
+  &.none {
+    margin-top: 0;
+  }
+
+  .btn {
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.single {
+    .btn {
+      margin-right: 0;
+    }
+  }
+}
+
+.separated-btn {
+  margin-top: 45px;
+}
+
+.section-cta {
+  margin-top: 75px;
+  text-align: center;
+
+  p {
+    margin-bottom: 25px;
+  }
+}

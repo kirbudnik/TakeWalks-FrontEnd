@@ -1,0 +1,40 @@
+/* accordion */
+.accordion{
+    border: 1px solid #611906;
+    border-bottom: none;
+    margin: 0 10px;
+}
+.accordion:last-of-type{
+    border-bottom: 1px solid #611906;
+}
+
+.accordion .title{
+    color: #611906;
+    padding: 8px;
+    margin-bottom: 0;
+    transition: background .2s, color .2s;
+    cursor: pointer;
+}
+.accordion .title .fa{
+    float: right;
+    margin-top: 4px;
+}
+.accordion .title:hover{
+    color: #fff;
+    background:#611906;
+}
+.accordion .body{
+    padding: 0 15px;
+    max-height: 0;
+    transition: max-height 1s, padding 1s;
+    overflow: hidden;
+    font-size: 1rem;
+}
+.accordion.selected .body{
+    max-height: 2000px;
+    padding: 15px;
+}
+.accordion.selected .title{
+    color: #fff;
+    background:#611906;
+}

@@ -1,0 +1,52 @@
+@import "_normalize.scss";
+@import "_mixins.scss";
+@import "_variables.scss";
+@import "_placeholders.scss";
+@import "_fonts.scss";
+@import "_typography.scss";
+@import "_global.scss";
+@import "_layout.scss";
+@import "_footer.scss";
+@import "_sections.scss";
+@import "_animations.scss";
+@import "_modals.scss";
+@import "_waves.scss"; // ripple effect
+@import "_slidebars.scss"; // off canvas menu
+@import "icons/_icons.scss";
+
+// Components
+@import "components/_grid.scss";
+@import "components/_dropdowns.scss";
+@import "components/_topnav.scss";
+@import "components/_tabs.scss";
+@import "components/_tour-list.scss";
+@import "components/_tooltips.scss";
+@import "components/_breadcrumbs.scss";
+@import "components/_swiper.scss";
+@import "components/_lists.scss";
+@import "components/_sidebars.scss";
+@import "components/_datepick.scss";
+@import "components/_modals.scss";
+@import "components/_togglers.scss";
+
+// Elements
+@import "elements/_inputs.scss";
+@import "elements/_checkbox.scss";
+@import "elements/_buttons.scss";
+@import "elements/_boxes.scss";
+@import "elements/_helpers.scss";
+@import "elements/_tables.scss";
+
+// Pages
+@import "pages/_home.scss";
+@import "pages/_city-tour-list.scss";
+@import "pages/_tour-detail.scss";
+@import "pages/_tag-comparison.scss";
+@import "pages/_compare-tours.scss";
+@import "pages/_checkout.scss";
+@import "pages/_account.scss";
+@import "pages/_login.scss";
+@import "pages/_static.scss";
+
+// Select element
+@import "select2/core.scss";

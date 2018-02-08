@@ -1,0 +1,124 @@
+.tours-wrap  {
+	margin-top: 7rem;
+
+	.tours {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.tours {
+	display: flex;
+	margin-bottom: $tours-offset;
+	flex-direction: column;
+
+	@include min-width($tablet) {
+		flex-flow: row wrap;
+
+		&.first-big {
+			.tour {
+				&:first-child {
+					flex-grow: 2;
+				}
+			}
+		}
+
+		&.last-big {
+			.tour {
+				&:last-child {
+					flex-grow: 2;
+				}
+			}
+		}
+
+		.tour {
+			&:first-child {
+				margin-bottom: 0;
+				margin-right: $tours-offset;
+			}
+		}
+	}
+
+	.tour {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		padding: 10px;
+		min-height: 300px;
+
+		cursor: pointer;
+		overflow: hidden;
+
+		&:first-child {
+			@include max-width($tablet) {
+				margin-bottom: 3rem;
+			}
+		}
+
+		&:hover {
+			.tour-img {
+				transform: scale(1.07) rotate(-.33deg);
+			}
+		}
+	}
+
+	.tour-img {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		transform: scale(1.001) rotate(-.001deg);
+		transition: transform 540ms $cb;
+	}
+}
+
+.tour-caption {
+	color: $pure-white;
+	position: relative;
+
+	.header {
+		margin-top: 0;
+		margin-bottom: 2.5rem;
+		font-weight: 700;
+	}
+}
+
+.reviews-count {
+	margin-bottom: 1.5rem;
+
+	.fa {
+		color: $pure-white;
+		font-size: 20px;
+		margin-right: 2px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&.price-box {
+		margin-bottom: 0;
+
+		.fa {
+			color: $typo-rose;
+		}
+
+		.num {
+			font-weight: 600;
+			padding-top: 4px;
+		}
+	}
+
+	.num {
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 600;
+		letter-spacing: 0.7px;
+		font-family: 'Open Sans';
+		padding-top: 15px;
+	}
+}

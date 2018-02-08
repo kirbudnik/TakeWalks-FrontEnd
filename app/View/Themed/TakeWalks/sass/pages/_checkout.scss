@@ -1,0 +1,31 @@
+.book-success {
+  p.descr {
+    @include cmt(24px, 16px);
+    @include cmb(54px, 30px);
+  }
+
+  .share-activity {
+    @include cmt(90px, 60px);
+  }
+}
+
+.share-activity {
+  display: flex;
+
+  .circles {
+    display: flex;
+  }
+
+  .left {
+    @include cmr(120px, 75px);
+  }
+
+  .icon-circle {
+    @include cmr(20px, 15px);
+  }
+
+  h5 {
+    margin-top: 0;
+    @include cmb(20px, 15px);
+  }
+}

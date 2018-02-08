@@ -1,0 +1,20 @@
+table{
+    margin: 0 auto;
+}
+table tr{
+    background: #ededed;
+}
+table tr:nth-child(2n){
+    background: #f4f4f4;
+}
+table td{
+    padding: 11px;
+    border: none;
+}
+main{
+    margin: 20px;
+}
+aside{
+    background: #f4f4f4;
+    padding: 20px;
+}

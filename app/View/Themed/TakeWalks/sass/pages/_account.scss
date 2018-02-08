@@ -1,0 +1,478 @@
+.paired-fields {
+  @include compact-padding(20px, 0, 10px, 0);
+  display: flex;
+
+  > * {
+    flex: 1;
+  }
+
+  .left {
+    @include cmr(60px, 35px);
+  }
+
+  @include collapse($tablet-portrait, 15px);
+
+  @include max-width($tablet-portrait) {
+    .left {
+      margin-right: 0;
+    }
+  }
+}
+
+section {
+  &.account-section {
+    @include compact-padding(56px, 10px, 25px, 0);
+    @include max-width(1440px) {
+      padding-bottom: 0 !important;
+    }
+
+    padding-bottom: 0;
+
+    .tabs {
+      @include cmt(40px, 25px);
+    }
+  }
+}
+
+.account-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    @include circle(92px);
+    margin-bottom: 10px;
+  }
+
+  .heading {
+    margin: 15px auto 0;
+    @include cf($h1-fs, 30px);
+  }
+}
+
+.upcoming-detail-heading {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .icon {
+    @include icon-size(22px);
+  }
+
+  div {
+    flex: 1;
+  }
+
+  .go-back {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: -45px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .tour-title {
+    margin-bottom: 0;
+    a{
+      color: #443d47;
+    }
+
+  }
+}
+
+.upcoming-detail-actions {
+  @include cmb(40px, 25px);
+  margin-left: -8px;
+
+  a {
+    padding: 2px 8px;
+    @include cf(22px, 18px);
+
+    @include max-width($mobile) {
+      padding: 5px 8px;
+      display: block;
+    }
+  }
+
+  @include max-width($mobile) {
+    margin-left: 0;
+  }
+}
+
+.upcoming-detail-description {
+  display: flex;
+  padding-bottom: 60px;
+
+  .left {
+    width: 400px;
+    @include cmr(50px, 35px);
+  }
+
+  .right {
+    flex: 1;
+  }
+
+  .map {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  &.separated {
+    margin-top: 35px;
+  }
+
+  @include max-width($tablet-portrait) {
+    flex-direction: column;
+    padding-bottom: 30px;
+
+    &.compact {
+      padding-bottom: 0;
+    }
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .left {
+      order: 1;
+      margin-top: 20px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .right {
+      order: 0;
+    }
+  }
+}
+
+.modify-tour-wrap {
+  display: flex;
+  align-items: flex-start;
+
+  .item {
+    margin-right: 40px;
+    flex: 1;
+
+    &.time-select-item {
+      @include min-width($tablet) {
+        max-width: 300px;
+      }
+    }
+
+    &[data-section="selectDate"] {
+      @include min-width(1024px) {
+        width: 35%;
+        flex: auto;
+        max-width: 380px;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .sidebar-subheading {
+      background-color: #fff;
+      margin-bottom: 15px;
+      padding-left: 0;
+
+      p {
+        color: #adb6bc;
+      }
+
+      .sidebar-circle {
+        background-color: #fff;
+        border: 1px solid $sep-border;
+        color: #adb6bc;
+        font-weight: 300;
+      }
+    }
+
+    .sidebar-content {
+      display: none;
+
+      &.no-padding {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    &.active {
+      .sidebar-subheading {
+        p {
+          color: $darkblue;
+        }
+
+        .sidebar-circle {
+          background-color: $green;
+          border-color: transparent;
+          color: #fff;
+        }
+      }
+
+      .sidebar-content {
+        &:not(.no-padding) {
+          box-shadow: 3.82px 21.666px 32px 0px rgba(0,0,0,.1);
+        }
+
+        display: block;
+      }
+
+      .sidebar-selected-value {
+        display: none;
+      }
+    }
+
+    &.completed {
+      .sidebar-subheading {
+        p {
+          color: $darkblue;
+        }
+      }
+
+      .sidebar-circle {
+        background-color: $green;
+        border-color: transparent;
+        color: #fff;
+      }
+
+      .sidebar-content {
+        padding-left: 0;
+        padding-top: 0;
+        display: block;
+      }
+
+      .foo-datepick {
+        display: none;
+      }
+
+      .sidebar-selected-value {
+        display: block;
+
+        input {
+          background-color: #f7f9fa;
+          cursor: pointer;
+
+          @include max-width(1440px) {
+            height: 50px;
+            line-height: 50px;
+          }
+        }
+
+        .select2-container--default .select2-selection--single {
+          background-color: #f7f9fa;
+        }
+      }
+    }
+  }
+
+  @include collapse($tablet-portrait, 35px);
+  @include max-width($tablet-portrait) {
+    .item {
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}
+
+.wishlist-tour {
+  display: flex;
+  margin-bottom: 40px;
+
+  .tour-img {
+    width: 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .tour-details {
+    background-color: #fff;
+    position: relative;
+    flex: 1;
+    @include compact-padding(37px, 37px, 24px, 24px);
+    border: 1px solid $sep-border;
+    border-left: none;
+  }
+
+  .tour-footer {
+    @include cmt(35px, 25px);
+    @extend %v-c;
+
+    .btn {
+      margin-left: auto;
+      box-shadow: 0px 7px 42px 0px rgba(0,0,0,.1);
+    }
+  }
+
+  @include max-width($tablet-portrait) {
+    flex-direction: column;
+
+    .tour-img,
+    .tour-details {
+      width: 100%;
+    }
+
+    .tour-img {
+      height: 230px;
+    }
+
+    .tour-details {
+      border-left: 1px solid $sep-border;
+    }
+
+    .tour-footer {
+      flex-direction: column;
+
+      .btn {
+        margin-top: 16px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.account-no-content {
+  text-align: center;
+}
+
+.random-content {
+  .account-no-content,
+  div.upcoming-tours {
+    display: none;
+  }
+}
+
+.connect-social-acc {
+  @extend %v-c;
+  margin-bottom: 24px;
+
+  .icon-circle {
+    margin-right: 14px;
+    position: relative;
+  }
+
+  [data-disconnect] {
+    display: none;
+  }
+
+  .connect-success {
+    @include circle(20px);
+    @extend %all-c;
+    background-color: $green;
+    border: 1px solid #fff;
+    position: absolute;
+    bottom: -2px;
+    right: -5px;
+    display: none;
+
+    .icon {
+      color: #fff;
+      font-size: 10px;
+    }
+  }
+
+  span {
+    color: $darkblue;
+    @include cf(24px, 18px);
+    font-style: italic;
+    font-weight: 300;
+    display: inline-block;
+    text-transform: lowercase;
+
+    @include min-width($tablet-portrait) {
+      min-width: 140px;
+    }
+  }
+
+  .btn {
+    margin-left: 30px;
+
+    &.facebook {
+      background-color: #3b5998;
+    }
+
+    &.google {
+      background-color: #d83f34;
+    }
+  }
+
+  &.connected {
+    [data-disconnect] {
+      display: block;
+    }
+
+    [data-connect] {
+      display: none;
+    }
+
+    .connect-success {
+      display: flex;
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 400;
+      color: $brand-green;
+      text-transform: capitalize;
+    }
+
+    .btn {
+      &.facebook,
+      &.google {
+        background-color: #8f9fa8;
+      }
+    }
+
+    .connect-social {
+      &.facebook {
+        background-color: #3b5998;
+      }
+
+      &.google {
+        background-color: #d83f34;
+      }
+    }
+  }
+
+  @include max-width($tablet-portrait) {
+    position: relative;
+    padding-bottom: 60px;
+    margin-bottom: 34px;
+
+    .btn {
+      position: absolute;
+      bottom: 0;
+      margin-left: 0;
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+.profile-photo {
+  @extend %v-c;
+
+  img {
+    @include circle(90px);
+    margin-right: 20px;
+  }
+
+  div {
+    .btn {
+      min-width: 250px;
+      display: block;
+
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+.ui-datepicker, .calendar-a .ui-datepicker {
+	background: #fb9c00;
+}
+
+.ui-datepicker-calendar td > * {
+	background: #fdce80;
+}
+
+.ui-datepicker-calendar td, .ui-datepicker-calendar th {
+	border: 2px solid #fb9c00;
+}
+
+.ui-datepicker-unselectable span {
+	background: #a80f01;
+	opacity: 0.7;
+	color: #e7e7e7;
+}
+
+.ui-datepicker-calendar td.ui-datepicker-today > * {
+	background: transparent;
+}
+
+.ui-datepicker-calendar td a {
+	color: #1b0b0c;
+}
+
+
+.calendar-a .ui-datepicker-calendar thead th {
+    font-size: 8.33px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#breadcrumbs:before {
+	background: #fcfaed;
+}
+
+#breadcrumbs .price-a span {
+	margin-bottom: 0;
+}
+
+.module-a:before, .important-info:before {
+	background: #fb9c00;
+}
+
+.module-a:after, .important-info:after {
+	height: 0; width: 0; border-left: 20px solid transparent; border-right: 20px solid transparent;
+    border-top: 20px solid #fb9c00;
+    background: transparent;
+}
+
+.module-a h2, .module-a .disclaimer, .important-info h2, .important-info .disclaimer {
+	color: #1b0b0c;
+}
+
+
+
+/* header */
+/* header slider blocks with text */
+#featured .header-inner {
+    width: 980px !important;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#featured .header-inner header, #featured .header-inner p.link-a.b {
+    margin-left: 0;
+    border: none;
+}
+
+#featured .header-inner p.link-a.b {
+    width: auto;
+    display: inline-block;
+}
+
+#featured .header-inner p.link-a.b a {
+    border: 1px solid;
+    border-color: transparent;
+    padding: 0 26px;
+    background-color: rgba(143,16,1,0.8);
+}
+
+#featured .header-inner p.link-a.b a:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* header padding, positioning, fonts, etc*/
+#featured .header-inner header, #featured .inner div > header {
+    padding: 20px 66px 20px 16px;
+    text-align: left;
+    width: 600px;
+    margin-top: 217px;
+    background-color: rgba(213,79,8,0.8);
+}
+
+/* h2 text inside */
+#featured .header-inner header h2 {
+    text-transform: none;
+    letter-spacing: 4px;
+    font-size: 3.6em;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+/* small text inside*/
+#featured .header-inner header p {
+    margin-bottom: 0;
+    font-size: 1.8em;
+}
+
+
+#featured.none-home-hero .header-inner header{
+    margin-top: 250px;
+}
+
+.activity-info.inside .activity-name p, .gallery-a li .title, .gallery-a li .price-a, .activity-info.inside .price-a {
+    font-weight: 700;
+}
+
+#footer h3 {
+    font-weight: 700;
+}
+
+.module-b h1, .module-b h2, .header-a.a {
+    font-weight: 700;
+}
+
+.activity-info.inside .price-a span, .price-a span {
+    font-weight: 400;
+}
+
+.list-a li .title {
+    font-weight: 700;
+}
+
+#breadcrumbs h1, #breadcrumbs h2, #breadcrumbs h3, #breadcrumbs p .price-a {
+    font-weight: 700;
+}
+
+#breadcrumbs p .price-a span {
+    font-weight: 400;
+}

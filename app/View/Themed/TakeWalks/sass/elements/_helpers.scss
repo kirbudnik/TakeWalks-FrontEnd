@@ -1,0 +1,214 @@
+.green-circle {
+  @extend %all-c;
+  @include circle(90px);
+  background-color: $brand-green;
+
+  .icon {
+    color: #fff;
+    font-size: 40px;
+  }
+}
+
+.icon-circle {
+  transition: background-color 200ms ease;
+  @include active(12px, .5);
+
+  &.share {
+    @include circle(62px);
+    @extend %all-c;
+    background-color: #a5afc3;
+    cursor: pointer;
+
+    .icon {
+      font-size: 24px;
+      color: #fff;
+      position: relative;
+    }
+
+    @include max-width(1440px) {
+      @include circle(54px);
+    }
+  }
+
+  &.email {
+    &:hover {
+      background-color: $red;
+    }
+
+    .icon {
+      top: 4px;
+    }
+  }
+
+  &.facebook {
+    &:hover {
+      background-color: #3b5998;
+    }
+
+    .icon {
+      left: 6px;
+    }
+  }
+
+  &.twitter {
+    &:hover {
+      background-color: #1da1f2;
+    }
+
+    .icon {
+      top: 2px;
+    }
+  }
+
+  &.google {
+    &:hover {
+      background-color: #d83f34;
+    }
+
+    .icon {
+      font-size: 30px;
+    }
+  }
+
+  &.add-calendar {
+    &:hover,
+    &.active {
+      background-color: $green;
+    }
+
+    .icon {
+      left: 1px;
+    }
+  }
+
+  &.connect-social {
+    background-color: #8f9fa8;
+    pointer-events: none;
+  }
+}
+
+.chat-bubble {
+  @include darken-btn($brand-blue);
+  position: fixed;
+  right: 70px;
+  bottom: 20px;
+  cursor: pointer;
+  transition: background-color 200ms ease,
+              opacity 200ms ease,
+              z-index 200ms ease,
+              transform 200ms ease;
+  border-radius: 9px;
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,.1);
+  opacity: 1;
+  z-index: 10;
+  pointer-events: auto;
+
+  padding: 18px 25px;
+  text-align: center;
+  font-weight: $med;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: darken(#0399e1, 7%);
+
+    &:before {
+      border-top-color: darken(#0399e1, 7%);
+    }
+  }
+
+  &:before {
+    @extend %pseudo;
+    bottom: -10px;
+    left: 14px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid;
+    border-top-color: $brand-blue;
+    transition: border-top-color;
+  }
+
+  &.bubble-hidden {
+    transform: translateY(150px);
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+.sidebar-circle {
+  @extend %all-c;
+  @include circle(42px);
+  background-color: #adb6bc;
+  font-size: 28px;
+  color: #fff;
+  line-height: 42px;
+}
+
+@keyframes bounce {
+  0% {transform: translateY(0);}
+  25% {transform: translateY(-7px);}
+  50% {transform: translateY(-15px);}
+  75% {transform: translateY(-7px);}
+  100% {transform: translateY(0);}
+}
+
+
+// OFFSETS
+
+
+.g-separated-top {
+  @include cmt(60px, 40px);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 35px;
+  bottom: 35px;
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  min-height: 35px;
+  @extend %all-c;
+  border-radius: 4px;
+  background-color: #d9d9d9;
+  color: #fff;
+
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 250ms ease,
+              background-color 250ms ease,
+              z-index 250ms ease;
+
+
+  &.active {
+    opacity: 1;
+    z-index: 15;
+    pointer-events: auto;
+  }
+
+  &:hover {
+    background-color: #bfbfbf;
+  }
+
+  @include active(8px);
+
+  @include min-width(1024px) {
+    display: none;
+  }
+
+  &.event-detail-back {
+    .icon {
+      position: relative;
+      right: 1px;
+    }
+  }
+}

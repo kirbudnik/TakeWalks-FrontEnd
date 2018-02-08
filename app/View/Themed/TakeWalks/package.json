@@ -1,0 +1,29 @@
+{
+  "name": "thsuite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "knitevision1",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "connect-livereload": "^0.6.0",
+    "cssnano": "^3.10.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-include-replace": "^5.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-php": "^1.5.1",
+    "grunt-webfont": "^1.6.0",
+    "load-grunt-tasks": "^3.5.2",
+    "matchdep": "^1.0.1",
+    "pixrem": "^3.0.2",
+    "postcss-scss": "^0.4.1",
+    "precss": "^1.4.0"
+  }
+}

@@ -1,0 +1,118 @@
+@mixin double-border($position: bottom) {
+	position: relative;
+
+	&:before {
+		position: absolute;
+		content: '';
+		display: block;
+		background-color: #f1f1f1;
+	}
+
+	@if $position == 'bottom' {
+		border-bottom: 1px solid #e2e3e3;
+		&:before {
+			width: 100%;
+			height: 1px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	} @else if $position == 'right' {
+		border-right: 1px solid #e2e3e3;
+		&:before {
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			width: 1px;
+		}
+	}
+}
+
+@mixin flex-container($gap, $center: true) {
+	display: flex;
+	align-items: center;
+
+	@if $center == 'true' {
+		justify-content: center;
+	} @else {
+		justify-content: space-between;
+	}
+
+	.grid-item {
+		margin-right: $gap;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+
+// Responsive
+// -----------------------------
+
+@mixin max-width($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin min-width($width) {
+	@media screen and (min-width: $width) {
+		@content;
+	}
+}
+
+@mixin mobile-grid($size, $gap) {
+	flex-flow: row wrap;
+
+	@include max-width($desktop) {
+		.grid-item {
+			flex-basis: calc( #{$size} - #{$gap} );
+			margin-bottom: 40px;
+
+			&:nth-child(even) {
+				margin-right: 0;
+			}
+
+			img {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+
+	@include max-width($landscape) {
+		.grid-item {
+			flex-basis: 100%;
+			margin-right: 0;
+		}
+	}
+}
+
+@mixin hover($color, $duration) {
+	transition: color $duration ease;
+
+	&:hover {
+		color: $color;
+		text-decoration: underline;
+	}
+}
+
+// Placeholder extens
+%v-c {
+	display: flex;
+	align-items: center;
+}
+
+%f-col {
+	display: flex;
+	flex-direction: column;
+}

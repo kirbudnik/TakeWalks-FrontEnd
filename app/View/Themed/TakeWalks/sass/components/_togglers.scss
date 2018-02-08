@@ -1,0 +1,103 @@
+.btn-toggler {
+  padding: 0;
+  text-align: center;
+  @include cf(22px, 20px);
+  color: #c6ccd0;
+  font-weight: $semi;
+  border: 1px solid #d8dfe6;
+  display: block;
+  transition: all 200ms ease;
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px;
+
+  &.active {
+    background-color: #f0f2f3;
+    color: $label-grey;
+  }
+
+  label {
+    padding: 0 25px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  @include max-width($compact) {
+    height: 45px;
+    line-height: 45px;
+  }
+}
+
+.btn-togglers {
+  display: flex;
+
+  .btn-toggler {
+    flex: 1 0 auto;
+    &:first-child {
+      border-right-color: transparent;
+    }
+
+    &.active {
+      &:first-child {
+        border-right-color: transparent;
+      }
+    }
+  }
+
+  &.multiple {
+    .btn-toggler {
+      border-right-color: transparent;
+      padding-left: 0;
+      padding-right: 0;
+
+      &.active {
+        + .btn-toggler {
+          border-left-color: #28bd8b;
+        }
+      }
+
+      &:last-child {
+        border-right-color: #d8dfe6;
+
+        &.active {
+          border-right-color: #28bd8b;
+        }
+      }
+    }
+  }
+
+  &.padded {
+    flex-grow: 0.3;
+    .btn-toggler {
+      flex: 1;
+    }
+  }
+}
+
+[data-toggle-target] {
+  display: none;
+  opacity: 0;
+  transform: translateY(-15%);
+  transition: none;
+  will-change: transform, opacity;
+
+  &.active {
+    opacity: 1;
+    display: block;
+    transform: translateX(0);
+    pointer-events: auto;
+    transition: opacity .3s cubic-bezier(.07,1.13,.68,.94),
+                transform .3s cubic-bezier(.07,1.13,.68,.94),
+                .3s cubic-bezier(.07,1.13,.68,.94);
+  }
+
+  &.slow {
+    transform: none;
+
+    &.active {
+      transition: all 400ms ease;
+    }
+  }
+}

@@ -1,0 +1,228 @@
+.listing .datepick-popup {
+	@include max-width($mobile) {
+		position: fixed !important;
+	}
+}
+
+.datepick {
+	width: 100% !important;
+	position: relative;
+	background-color: #fff;
+	min-width: 300px;
+
+	.datepick-popup & {
+		border: 1px solid $input-border;
+		padding: 0 7px;
+		border-radius: 4px;
+	}
+
+	table {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	th {
+		font-weight: $bold;
+    font-size: 17px;
+    text-transform: uppercase;
+		color: $brand-green;
+	}
+
+	.datepick-nav {
+		display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	}
+
+	.datepick-cmd {
+		flex: 0;
+		padding: 8px;
+		position: relative;
+		z-index: 6;
+
+		.icon {
+			color: #ccd4d7;
+			@include icon-size(22px);
+		}
+
+		&:hover {
+			.icon {
+				color: $brand-purple;
+			}
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&-prev,
+		&-next {
+			flex-basis: 25%;
+		}
+	}
+
+	.datepick-cmd-today {
+		font-weight: $light;
+		@include cf(34px, 24px);
+		color: #37474f;
+		flex: 1 0 auto;
+		opacity: 0;
+	}
+
+	.datepick-month-header {
+		font-weight: $light;
+		@include cf(34px, 24px);
+		color: #37474f;
+		position: absolute;
+		top: 10px;
+		width: 100%;
+		text-align: center;
+		z-index: 4;
+	}
+
+	.datepick-cmd-next {
+		text-align: right;
+
+		.icon {
+			transform: rotateZ(180deg);
+		}
+	}
+
+	td {
+		padding: 7px 0;
+		text-align: center;
+		font-size: 22px;
+
+		a {
+			display: inline-block;
+			width: 33px;
+			height: 33px;
+			line-height: 33px;
+			border-radius: 50%;
+			background-color: #f3f5f6;
+
+			color: $text-color;
+			text-align: center;
+
+			&.datepick-other-month {
+				color: #cbd2d7;
+			}
+
+			&.datepick-selected {
+				background-color: $brand-green;
+				color: #fff;
+
+				&:hover {
+					color: #fff;
+				}
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+		.disabled-date{
+			color: #cbd2d7;
+		}
+
+		@include max-width(1440px) {
+			padding: 4px 0;
+
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 18px;
+
+			a {
+				height: 30px;
+				width: 30px;
+				line-height: 30px;
+				font-size: 18px;
+			}
+		}
+	}
+
+	.datepick-ctrl {
+		.datepick-cmd {
+			color: $grey-blue;
+			font-size: 12px;
+		}
+	}
+}
+
+.datepick-with-arrows {
+	margin-left: 22px;
+	display: flex;
+	align-items: center;
+
+	.change-date {
+		color: #a0adba;
+		padding: 8px;
+		cursor: pointer;
+
+		&:hover {
+			color: $brand-green;
+		}
+
+		&:active {
+			color: #a0adba;
+		}
+
+		em {
+			font-style: normal;
+		}
+
+		&.prev-date {
+			@include min-width($mobile) {
+				position: relative;
+				min-width: 55px;
+
+				em {
+					position: absolute;
+					right: 5px;
+				}
+			}
+		}
+
+		@include max-width($mobile) {
+			&.prev-date {
+				text-align: right;
+
+				em {
+					display: block;
+				}
+			}
+
+			&.next-date {
+				text-align: left;
+
+				em {
+					display: block;
+				}
+			}
+		}
+	}
+
+	.icon-arrow_left {
+		font-size: 12px;
+
+		text-align: center;
+
+
+	}
+	.next-date .icon-arrow_left{
+		transform: rotate(180deg);
+	}
+
+	.input-icon {
+		margin: 0 10px;
+
+	}
+}
+
+
+.datepick-ctrl {
+	@include max-width($mobile) {
+		display: none;
+	}
+}

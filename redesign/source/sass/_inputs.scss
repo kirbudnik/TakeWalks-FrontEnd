@@ -1,0 +1,16 @@
+input {
+	padding: 9px 18px;
+	font-size: $typo-anchor-fs;
+	color: #ddd;
+	border: 1px solid #a6a6a7;
+	border-radius: 6px;
+	color: lighten($typo-black, 25%);
+	font-weight: 500;
+
+	@include placeholder {
+		color: $typo-black;
+		font-size: $typo-anchor-fs;
+		font-weight: 600;
+		opacity: 1;
+	}
+}

@@ -1,0 +1,424 @@
+.tour-list-wrap {
+  &:not(.standalone) {
+    .tour-list-section {
+      &:nth-child(odd) {
+        background-color: #f7f7f7;
+      }
+    }
+  }
+}
+
+.tour-list-items {
+  @include row($gap: 35px, $tablet-count: 2, $landscape-count: 2, $col-stretch: false);
+  flex-flow: row wrap;
+  align-items: stretch;
+
+  .col {
+    display: flex;
+  }
+
+  .list-multiple-rows & {
+    margin-bottom: 55px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.vertical {
+    .tour-img {
+      min-height: 15vw;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include max-width(1440px) {
+        min-height: 240px;
+      }
+    }
+
+    .tour-title {
+      width: 100%;
+    }
+
+    .tour-box-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .tour-details {
+      flex: 1;
+      position: relative;
+      padding-bottom: 90px;
+
+      @include min-width(1440px) {
+        padding-bottom: 120px;
+      }
+
+      .tour-stats {
+        position: absolute;
+        bottom: 15px;
+        width: calc(100% - 32px);
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        @include max-width(1440px) {
+          width: calc(100% - 20px);
+        }
+      }
+    }
+  }
+
+  .tour-title {
+    margin-right: 0;
+  }
+}
+
+.tour-title {
+  margin: 0;
+  margin-bottom: 22px;
+  font-weight: $semi;
+  color: $black;
+  width: 90%;
+  transition: all 200ms ease;
+  font-family: $font-family;
+  @include cf(32px, 22px);
+  a:visited {
+    color:$black;
+  }
+
+}
+
+.tour-box {
+  cursor: pointer;
+
+  .tour-box-content {
+    border: 1px solid #d8d8d8;
+    width: 100%;
+    transition: box-shadow 200ms ease,
+                border-color 200ms ease;
+  }
+
+  &:hover {
+    .tour-box-content {
+      box-shadow: 0px 32px 50px 0px rgba(0,0,0,.1);
+      border-color: transparent;
+
+      .tour-title {
+        color: $brand-green;
+      }
+    }
+  }
+
+  .tour-img {
+    position: relative;
+
+    @include max-width(1024px) {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .tour-details {
+    @include compact-padding(48px, 36px, 28px, 18px);
+    background-color: #fff;
+  }
+
+  .tour-details,
+  .tour-stats {
+    p {
+      color: $label-grey;
+      @include cf(23px, 17px);
+      font-weight: 400;
+    }
+  }
+
+  .tour-stats {
+    @include max-width(1280px) {
+      padding-left: 12px;
+      padding-right: 12px;
+
+      .icon {
+        font-size: 20px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &.discounted {
+    .tour-price {
+      line-height: initial;
+      background-color: $brand-purple;
+
+      span {
+        display: block;
+
+        &.default-price {
+          @include cf(26px, 18px);
+          position: relative;
+
+          &:after {
+            position: absolute;
+            content: "";
+            left: -2px;
+            width: 130%;
+            top: 50%;
+            right: 0;
+            border-top: 1px solid;
+            border-color: inherit;
+            transform:rotate(-20deg);
+          }
+        }
+
+        &.discounted-price {
+          @include cf(40px, 26px);
+        }
+      }
+    }
+  }
+
+  .tour-compare {
+    background-color: #fafafa;
+    border-top: 1px solid #d8d8d8;
+    @include compact-padding(20px, 20px, 14px, 14px);
+    @include max-width($tablet) {
+      display: none;
+    }
+  }
+}
+
+.tour-stats {
+  @include cmt(40px, 32px);
+  @include compact-padding(0, 24px, 0, 12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    margin: 0;
+    display: inline-block;
+  }
+
+  .icon {
+    color: #d3d3d3;
+    margin-right: 12px;
+    @include cf(32px, 25px);
+
+    &.icon-max {
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .sep {
+    width: 1px;
+    height: 32px;
+    background-color: #ebebeb;
+
+    @include max-width(1440px) {
+      height: 25px;
+    }
+  }
+}
+
+.tour-badge {
+  @include circle(58px);
+  @extend %all-c;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  box-shadow: 0px 5px 13px 0px rgba(0,0,0,.1);
+
+  .icon {
+    color: #fff;
+    @include cf(30px, 24px);
+    position: relative;
+    left: 1px;
+  }
+
+  &.gold {
+    background-color: #eeb904;
+  }
+
+  &.silver {
+    background-color: #b7b7b7;
+  }
+
+  &.bronze {
+    background-color: #b7703f;
+  }
+
+  @include max-width(1440px) {
+    @include circle(52px);
+  }
+}
+
+.tour-box-reviews {
+  .icon {
+    @include cf(34px, 23px);
+    color: #d3d3d3;
+  }
+
+  .icon-star_active {
+    color: #ffb446;
+  }
+
+  p {
+    margin: 0;
+    line-height: 30px;
+    margin-left: 20px;
+    display: inline-block;
+
+    @include max-width(1440px) {
+      line-height: 23px;
+    }
+  }
+}
+
+.tour-price {
+  width: 90px;
+  height: 75px;
+  color: #fff;
+  @include cf(36px, 24px);
+  font-weight: 400;
+  background-color: $brand-green;
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  text-align: center;
+  box-shadow: 0px 5px 13px 0px rgba(0,0,0,.1);
+  @extend %all-c;
+  flex-direction: column;
+
+  @include max-width(1440px) {
+    width: 72px;
+    height: 62px;
+  }
+
+  @include max-width($tablet) {
+    right: -11px;
+  }
+}
+
+.tour-tag {
+  height: 62px;
+  width: 70%;
+  display: flex;
+  position: absolute;
+  left: -5px;
+  bottom: 0;
+
+  .icon-holder {
+    width: 62px;
+    height: 62px;
+    @extend %all-c;
+
+    .icon {
+      color: #fff;
+
+      @include icon-size(35px);
+    }
+
+    &:before {
+      @extend %pseudo;
+      bottom: -3px;
+      left: 1px;
+      transform: rotate(-45deg);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 3px 0 3px 6px;
+      border-color: transparent transparent transparent #007bff;
+    }
+  }
+
+  .text-holder {
+    @include cf(24px, 17px);
+    font-weight: 400;
+    color: #fff;
+    line-height: 62px;
+    flex: 1;
+    padding-left: 17px;
+    padding-right: 17px;
+    position: relative;
+    letter-spacing: $ls;
+  }
+
+  &.exclusive {
+    background-color: #42789a;
+
+    .icon-holder {
+      background-color: #3b6c8a;
+
+      &:before {
+        border-color: transparent transparent transparent #3b6c8a;
+      }
+    }
+  }
+
+  &.new {
+    background-color: $green;
+
+    .icon-holder {
+      background-color: #4fa38e;
+
+      &:before {
+        border-color: transparent transparent transparent #4fa38e;
+      }
+    }
+  }
+
+  &.sale {
+    background-color: $brand-purple;
+
+    .icon-holder {
+      background-color: #9d304c;
+
+      &:before {
+        border-color: transparent transparent transparent #9d304c;
+      }
+    }
+  }
+
+  @include max-width(1440px) {
+    height: 48px;
+
+    .icon-holder {
+      height: 48px;
+      width: 48px;
+
+      .icon {
+        @include icon-size(23px);
+      }
+    }
+
+    .text-holder {
+      line-height: 48px;
+    }
+  }
+}
+
+.badges-legend {
+  @include row($gap: 45px, $tablet-count: 2, $landscape-count: 1);
+
+  .badge-legend {
+    display: flex;
+  }
+
+  .tour-badge {
+    @include cmr(30px, 20px);
+    position: static;
+    box-shadow: none;
+  }
+
+  h3 {
+    margin: 0;
+    margin-bottom: 20px;
+    @include cf(38px, 29px);
+    @include cmb(20px, 14px);
+    font-weight: $semi;
+  }
+}

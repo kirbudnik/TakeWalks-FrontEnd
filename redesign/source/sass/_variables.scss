@@ -1,0 +1,72 @@
+// Colors
+// ----------------------
+
+//global
+$pure-black: #000;
+$pure-white: #fff;
+
+//text
+$typo-black: #231f20;
+$typo-rose: #ee3f75;
+$typo-blue: #0db7e1;
+$typo-grey-default: #6d6e71;
+$typo-blue-highlight: #0cb7e1;
+$typo-grey-light: #8f999c;
+
+//bg
+$bg-rose: $typo-rose;
+$bg-rose-grey: #ede7e5;
+
+$bg-blue: #00aeef;
+$bg-blue-light: $typo-blue-highlight;
+
+//borders
+$border-dark-grey: #939598;
+
+
+// Sizes
+// ----------------------
+
+//grid
+$grid-max: 960px;
+
+//typo - gaps
+$header-mb-default: 44px;
+$p-mb-default: 30px;
+$header-mb-small: $p-mb-default;
+$header-mt-small: 25px;
+
+//typo - fontsizes
+$headers-font-sizes: (
+	h1: 51px,
+	h2: 42px,
+	h3: 33px,
+	h4: 30px,
+	h5: 28px,
+	h6: 17px,
+);
+
+//texts
+
+$typo-smaller-fs: 14px;
+$typo-default-fs: 15px;
+$typo-anchor-fs: 16px;
+$typo-bigger-fs: 17px;
+
+$typo-semiheader-font-size: $typo-anchor-fs; //16px
+
+//buttons
+$btn-primary-fs: 27px;
+
+// Transitions
+$cb: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+
+// -------------------
+// Breakpoints
+// -------------------
+
+$desktop: 992px;
+$tablet: 768px;
+$landscape: 640px;
+$portrait: 480px;

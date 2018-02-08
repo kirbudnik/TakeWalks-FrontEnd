@@ -1,0 +1,544 @@
+body {
+  font-family: $font-family;
+  line-height: $line-height;
+  color: $text-color;
+  background-color: $body-bg;
+}
+
+$h1-fs: 36px;
+$section-heading-fs: 42px;
+$section-heading-fs-compact: 36px;
+$heading-color-alter: $text-color;
+$section-heading-color: $text-color;
+
+h1,
+h2,
+h3 {
+  font-family: $heading-family;
+  color: $section-heading-color;
+  font-weight: 400;
+
+  &.default {
+    font-family: $heading-family;
+  }
+}
+
+h1 {
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 20px;
+  @include cf($h1-fs, 30px);
+  color: $black;
+
+  &.small {
+    @include compact-font(30px, 26px);
+  }
+
+  &.big {
+    font-size: 42px;
+  }
+
+  &.bigger {
+    @include compact-font(50px, 38px);
+    font-weight: $semi;
+  }
+
+  &.black {
+    color: #37474f;
+  }
+
+  &.separated {
+    @include cmt(50px, 34px);
+  }
+}
+
+h2 {
+  &.bigger {
+    @include compact-font(50px, 38px);
+  }
+
+  &.big {
+    @include cf($h1-fs, 30px);
+  }
+}
+
+h5 {
+  &.subtitle {
+    font-weight: $med;
+    @include cf(17px, 14px);
+    text-transform: uppercase;
+    margin: 0;
+
+    .section-title & {
+      margin-bottom: 8px;
+    }
+
+    &.green {
+      color: $brand-green;
+    }
+
+    &.separated-btm {
+      margin-bottom: 14px;
+    }
+
+    &.black {
+      color: $black;
+      font-size: 15px;
+      font-weight: $semi;
+    }
+
+    &.darkblue {
+      color: $label-grey;
+      @include cf(17px, 15px);
+    }
+
+    &.white {
+      color: #fff;
+    }
+
+    &.grey {
+      color: #aaafb2;
+    }
+
+    &.purple {
+      color: $brand-purple;
+    }
+
+    &.label {
+      margin-bottom: 20px;
+      font-weight: $med;
+    }
+
+    &.separated-top {
+      @include cmt(90px, 55px);
+
+      @include max-width($mobile) {
+        margin-top: 35px;
+      }
+    }
+  }
+}
+
+h2,
+h1 {
+  &.tour-list-title {
+    margin: 20px 0 0 0;
+    font-weight: 400;
+    @include cf(50px, 36px);
+  }
+
+  &.tour-title {
+    font-family: $heading-family;
+    margin: 0;
+    margin-bottom: 22px;
+    font-weight: 400;
+    @include cf(50px, 36px);
+
+    .icon {
+      color: #d2d8dc;
+      position: relative;
+      bottom: 3px;
+      @include cf(30px, 24px);
+    }
+  }
+
+  &.subtotal-price {
+    @include cf(42px, 28px);
+    font-weight: $med;
+    color: $green;
+    margin: 2px auto 12px;
+  }
+
+  &.page-title {
+    @include cf(42px, 28px);
+
+    &.sans {
+      font-family: $font-family;
+    }
+  }
+}
+
+h4 {
+  &.small-heading {
+    @include cf(24px, 20px);
+    color: $black;
+    font-weight: 400;
+    margin-bottom: 3px;
+  }
+
+  &.input-row-heading {
+    @include cmb(27px, 20px);
+    margin-top: 0;
+    @include cf(28px, 22px);
+    color: $grey-blue;
+    font-weight: 400;
+    font-family: $heading-family;
+
+    .icon {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+p, div.description-container {
+  letter-spacing: $ls;
+  font-weight: 300;
+
+  &.descr {
+    margin-top: 0;
+    margin-bottom: 0;
+    @include cf(26px, 22px);
+    line-height: 1.3;
+    color: $text-color;
+
+    @include max-width(1440px) {
+      &.signup-descr {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+    }
+
+    @include max-width($tablet-portrait) {
+      &.signup-descr {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    @include max-width($mobile) {
+      font-size: 20px;
+    }
+
+    a.green,
+    a {
+      @include cf(26px, 22px);
+    }
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.default {
+    font-size: 17px;
+    margin: 0;
+    font-weight: 400;
+    color: $text-color;
+  }
+
+  &.single {
+    margin: 12px 0;
+  }
+
+  &.separated {
+    margin: 22px 0;
+  }
+
+  &.limited {
+    width: 60%;
+
+    @include max-width($tablet-portrait) {
+      width: 100%;
+    }
+  }
+}
+
+.section-cta {
+  p {
+    &.descr {
+      @include max-width($mobile) {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+[data-scroll-toggler] {
+  transition: color 200ms ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $brand-green !important;
+    text-decoration: underline;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: color 200ms ease;
+
+  &:hover:not(.btn, .topnav-item, .guide-tag) {
+    color: $green;
+  }
+
+  &.green {
+    color: $green;
+    font-weight: $semi;
+    @include cf(22px, 17px);
+
+    &.promo-code {
+      @include cf(20px, 17px);
+      font-weight: 400;
+    }
+
+    &:hover:not(.btn) {
+      color: $brand-purple;
+    }
+
+    &.underlined {
+      color: $green;
+      font-weight: 400;
+    }
+  }
+
+  p & {
+    color: $green;
+  }
+
+  &.phone-num {
+    @include cf(30px, 22px);
+  }
+
+  &.underlined {
+    font-size: 17px;
+    color: $label-grey;
+    text-decoration: underline;
+
+    &.normal {
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  &.towishlist {
+    color: $brand-green;
+    @include cf(20px, 18px);
+    font-weight: $semi;
+    text-decoration: none;
+
+    .icon {
+      margin-right: 10px;
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    &:hover {
+      color: $brand-purple;
+    }
+  }
+
+  &.block {
+    display: block;
+  }
+
+  &.event-title {
+    font-weight: 400;
+    @include cf(30px, 22px);
+    color: $green;
+  }
+
+  &.remove-from-cart {
+    @include cf(20px, 16px);
+    display: block;
+    text-align: left;
+    color: $text-color;
+
+    span {
+      text-decoration: underline;
+    }
+
+    .icon {
+      color: $brand-purple;
+      margin-right: 12px;
+    }
+  }
+
+  &.has-icon {
+    text-transform: uppercase;
+
+    .icon {
+      margin-right: 12px;
+    }
+  }
+
+  &.normal {
+    font-weight: 400;
+    text-decoration: underline;
+  }
+
+  &.remove-underlined {
+    color: $bluegrey;
+
+    .icon {
+      color: $brand-purple;
+      margin-right: 8px;
+    }
+
+    span {
+      text-decoration: underline;
+      @include cf(20px, 17px);
+      font-weight: 300;
+    }
+  }
+}
+
+.section-heading {
+  margin-bottom: 20px;
+  @include cf($section-heading-fs, $section-heading-fs-compact);
+  color: $section-heading-color;
+  font-weight: 400;
+
+  &.small {
+    @include cf(38px, 32px);
+
+    @include max-width($tablet-portrait) {
+      font-size: 27px;
+    }
+  }
+
+  @include max-width($tablet) {
+    font-size: 28px;
+  }
+}
+
+.section-title {
+  margin-bottom: 80px;
+
+  @include max-width($tablet) {
+    margin-bottom: 40px;
+  }
+
+  &.small {
+    margin-bottom: 50px;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.left {
+    text-align: left;
+
+    .section-heading {
+      text-align: left;
+    }
+  }
+
+  .icon,
+  img {
+    margin-bottom: 22px;
+  }
+
+  .icon {
+    font-size: 50px;
+    color: $brand-green;
+
+    @include max-width($tablet) {
+      font-size: 38px;
+    }
+  }
+
+  .btn {
+    margin-top: 42px;
+  }
+
+  &.title-inline {
+    display: flex;
+    align-items: center;
+
+    .section-heading {
+      margin-bottom: 0;
+    }
+
+    .icon {
+      margin-bottom: 0;
+    }
+
+    .input-icon {
+      .icon {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+
+    &.title-with-datepick {
+      flex-direction: column;
+      margin-bottom: 0;
+
+      .heading {
+        margin-bottom: 15px;
+      }
+
+      .datepick-with-arrows {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .default {
+    font-weight: 400;
+  }
+
+  .input-icon {
+    .icon {
+      color: $text-color;
+    }
+  }
+
+  &.has-italic {
+    h2 {
+      margin-bottom: 0;
+    }
+
+    p {
+      &:last-child {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.icon {
+  &.orange {
+    color: $orange;
+  }
+
+  &.green {
+    color: $green;
+  }
+
+  .tour-type-title & {
+    font-size: 50px;
+    color: $brand-green;
+  }
+}
+
+.header {
+  &.blue {
+    color: $text-color;
+    font-size: 30px;
+    font-weight: $semi;
+  }
+
+  &.separator {
+    margin-top: 50px;
+  }
+}
+
+span {
+  &.typo {
+    @include cf(22px, 19px);
+  }
+}
+
+.icon-grey {
+  color: #c4c9ce;
+
+  a:hover & {
+    color: $brand-purple;
+  }
+}

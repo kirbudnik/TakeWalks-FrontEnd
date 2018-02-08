@@ -1,0 +1,82 @@
+.guide-detail {
+  @include row($gap: 30px, $col-stretch: false);
+  @include cmb(50px, 35px);
+  justify-content: flex-start;
+
+  .col {
+    flex: 0 1 auto;
+
+    &.img-col {
+      min-width: 200px;
+      height: 200px;
+      background-position: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .tags {
+    @include row($gap: 10px);
+    @include cmt(40px, 30px);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .col {
+      flex: 0 1 auto;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.guide-quote {
+  margin-bottom: 40px;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 300;
+  font-family: $font-family;
+}
+
+.guide-tag {
+  background-color: $brand-blue;
+  padding: 6px 20px;
+  border-radius: 20px;
+  @include cf(20px, 18px);
+  color: #fff;
+  transition: background-color 200ms ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($brand-blue, 10%);
+    color: #fff;
+  }
+}
+
+.guide-description {
+  p {
+    &:nth-child(even) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.book-success {
+  .success-heading {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+
+    .icon {
+      margin-right: 15px;
+      margin-bottom: 0;
+    }
+
+    .page-title {
+      margin-bottom: 0 !important;
+      line-height: 1;
+    }
+  }
+}

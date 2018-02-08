@@ -1,0 +1,124 @@
+.default-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	&.li-separated {
+		li {
+			margin-bottom: 22px;
+		}
+	}
+
+	&.li-gap-small {
+		li {
+			margin-bottom: 6px;
+		}
+	}                                                                                                                                                                                                                                                                                                
+}
+
+.icon-list {
+	li {
+		padding-left: 32px;
+		position: relative;
+		font-size: 15px;
+
+		.fa,
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			font: normal normal normal 18px/1 FontAwesome;
+		}
+	}
+
+	&.blue-icons {
+		li {
+			&:before {
+				color: $typo-blue;
+			}
+		}
+	}
+
+	&.stars {
+		li {
+			font-weight: 300;
+			&:before {
+				content: "\f005";
+			}
+		}
+	}
+
+	&.pins {
+		li {
+			&:before {
+				content: "\f041";
+			}
+		}
+	}
+
+	&.checkmarks {
+		li {
+			&:before {
+				content: "\f046";
+			}
+		}
+	}
+}
+
+.detail-list {
+	font-weight: 700;
+
+	li {
+		margin-bottom: 14px;
+		font-size: 15px;
+	}
+}
+
+.inline-list {
+	li {
+		display: inline;
+		padding-right: 6px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
+
+.link-list {
+	text-align: center;
+
+	a {
+		color: $typo-grey-light;
+		font-size: 14px;
+		@extend .rose-hl;
+		font-weight: 600;
+	}
+
+	.footer-links & {
+		li {
+			padding-right: 12px;
+		}
+
+		a {
+			color: $typo-black;
+			font-weight: 800;
+			font-size: 17px;
+
+			&:hover {
+				color: $typo-rose;
+			}
+		}
+
+		@include max-width($portrait) {
+			li {
+				display: block;
+				margin-bottom: 12px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

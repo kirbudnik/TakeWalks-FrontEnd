@@ -1,0 +1,1 @@
+<?phpclass EventsStagePaxRemaining extends AppModel{    var $name = "EventsStagePaxRemaining";    var $useTable = "events_stage_pax_remainings"; // table name            var $belongsTo = array(        'Event' => array(                 'className'	=> 'Event',                 'foreignKey'	=> 'events_id'         )    );         public $hasMany = array(    );}?>

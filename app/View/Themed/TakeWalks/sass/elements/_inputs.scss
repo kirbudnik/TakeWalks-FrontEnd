@@ -1,0 +1,332 @@
+$input-row-mb: 22px;
+
+
+input {
+  box-shadow: none;
+  width: 100%;
+  outline: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: $input-height;
+  line-height: normal;
+  background-color: #fff;
+  border: 1px solid $input-border;
+  transition: border-color 200ms ease,
+              background-color 200ms ease;
+  color: $label-grey;
+
+  @include placeholder {
+    color: #9e9e9e;
+    line-height: normal;
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: $green;
+  }
+
+  &.blue-hl {
+    &:focus {
+      border-color: $green;
+    }
+  }
+
+  section.grey & {
+    border-color: #bac5c9;
+  }
+
+  &[type="number"] {
+    background-color: #fafbfc;
+    font-size: 20px;
+
+    &:focus {
+      background-color: #fff;
+    }
+
+    &.cc {
+      background-color: #fff;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+    }
+  }
+
+  &.is-datepick {
+    cursor: pointer;
+  }
+}
+
+textarea {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid $input-border;
+  transition: border-color 200ms ease;
+  resize: none;
+  transition: all 200ms ease;
+  padding: 15px 20px;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: $green;
+  }
+
+  &.disabled {
+    opacity: 0.4;
+    border-color: lighten($input-border, 0.5);
+    pointer-events: none;
+  }
+
+  #other-reasons {
+    max-width: 450px;
+    height: 100px;
+  }
+}
+
+select {
+  &.white {
+    height: $input-height;
+    line-height: $input-height;
+    background-color: #fff;
+    border: 1px solid $input-border;
+    font-size: 18px;
+    color: #4a5154;
+    transition: height 200ms ease,
+                line-height 200ms ease,
+                font-size 200ms ease;
+  }
+
+  &.guest-num {
+    padding: 0 40px 0 12px;
+  }
+}
+
+label {
+  font-size: 13px;
+  color: #37474f;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: $ls;
+
+  &.inline {
+    margin-right: 13px;
+    color: $label-grey;
+    font-size: 14px;
+  }
+}
+
+.input-label {
+  font-size: 12px;
+  color: #4c6379;
+  font-weight: $bold;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+
+.input-row {
+  margin-bottom: $input-row-mb;
+  width: 100%;
+
+  .input-label {
+    display: block;
+  }
+
+  &.auto {
+    display: flex;
+
+    .input-div {
+      margin-right: 15px;
+      flex: 1;
+
+      input {
+        width: 100%;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+  }
+
+  &.three-column{
+    .input-div{
+      width: 33.3%;
+    }
+  }
+
+  &.collapse {
+    @include max-width($mobile) {
+      flex-direction: column;
+
+      .input-div {
+        margin-bottom: 22px;
+        margin-right: 0;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &.last {
+    margin-bottom: 30px;
+  }
+
+  &.item-below {
+    margin-bottom: 5px;
+  }
+}
+
+.select-box {
+  &.full-width {
+    .select2-container {
+      width: 100% !important;
+    }
+  }
+}
+
+.md-placeholder {
+  position: relative;
+
+  input {
+    padding-top: 12px;
+  }
+
+  .placeholder {
+    position: absolute;
+    line-height: 50px;
+    height: 50px;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    color: transparentize($label-grey, .6);
+    @include cf(24px, 18px);
+    pointer-events: none;
+    transition: color 200ms ease,
+                top 200ms ease;
+  }
+
+  input {
+    &:focus {
+      ~ .placeholder {
+        font-weight: $semi;
+        font-size: 12px;
+        color: $green;
+        top: -12px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &.valid,
+  &.invalid {
+    .placeholder {
+      font-weight: $semi;
+      font-size: 12px;
+      top: -12px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.input-icon {
+  position: relative;
+
+  &.valid {
+    input {
+      border-color: $green;
+    }
+
+    .icon {
+      color: $green !important;
+    }
+
+    .icon-calendar {
+      display: none;
+    }
+  }
+
+  &.invalid {
+    input {
+      border-color: $orange;
+      background-color: $error-bg;
+
+      &:focus {
+        ~ .placeholder {
+          color: $orange;
+        }
+      }
+    }
+
+    .icon {
+      color: $orange !important;
+      font-size: 26px;
+      bottom: 6px;
+    }
+
+    .placeholder {
+      color: $orange;
+    }
+
+    .icon-calendar {
+      display: none;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    right: 16px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #d6dee2;
+    pointer-events: none;
+
+    &.icon-circle-close {
+      pointer-events: auto;
+    }
+
+    &.icon-cvv {
+      height: 14px;
+    }
+  }
+
+  input {
+    padding-left: 20px;
+    padding-right: 44px;
+    font-size: 18px;
+    color: #4a5154;
+    transition: height 200ms ease,
+                line-height 200ms ease,
+                font-size 200ms ease;
+
+    &:focus {
+      ~ .icon {
+        color: $icon-active;
+      }
+    }
+  }
+
+  &.no-validate {
+    .icon-checkmark_circled {
+      display: none;
+    }
+  }
+}
+
+.error-msg {
+  margin-top: 5px;
+  color: $orange;
+  font-weight: 400;
+  font-size: 16px;
+  display: none;
+  text-align: left;
+}

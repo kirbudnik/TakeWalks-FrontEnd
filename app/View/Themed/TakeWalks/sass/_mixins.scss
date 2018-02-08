@@ -1,0 +1,305 @@
+@mixin max-width($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin min-width($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin absolute-center($size) {
+  width: $size;
+  height: $size;
+  top: 0; bottom: 0; left: 0; right: 0;
+  position: absolute;
+  margin: auto;
+}
+
+@mixin collapse($from, $mb) {
+  @media (max-width: $from) {
+    flex-direction: column;
+
+    > * {
+      margin-right: 0;
+      margin-bottom: $mb;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@mixin select-text($pr) {
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-right: $pr;
+  }
+}
+
+@mixin ipad-portrait {
+  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    @content;
+  }
+}
+
+@mixin circle($size) {
+  width: $size;
+  min-width: $size;
+  height: $size;
+  min-height: $size;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin active($size, $transparency: .5) {
+  &:active {
+    box-shadow: inset 0 0 $size rgba(0, 0, 0, $transparency);
+  }
+}
+
+@mixin darken-btn($col) {
+  background-color: $col;
+  transition: background-color 200ms ease;
+
+  &:hover {
+    background-color: darken($col, 7%);
+  }
+}
+
+%transition {
+  transition: all 160ms ease;
+}
+
+@mixin trans($timing, $fn, $prop3: null, $prop: null, $prop1: null, $prop2: null) {
+  transition: $prop $timing $fn,
+              $prop1 $timing $fn,
+              $prop2 $timing $fn;
+}
+
+@mixin icon-hover($nonactive, $active) {
+  @extend %transition;
+  color: $nonactive;
+
+  .icon {
+    @extend %transition;
+    color: $nonactive;
+  }
+
+  &:hover {
+    color: $active;
+
+    .icon {
+      color: $active;
+    }
+  }
+}
+
+@mixin icon-size($size) {
+  font-size: $size;
+  width: $size;
+  height: $size;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+@mixin row($gap: 30px,
+           $gap-btm: 25px,
+           $vcenter: false,
+           $hcenter: true,
+           $col-stretch: true,
+           $desktop-count: 3,
+           $tablet-count: 3,
+           $landscape-count: 2,
+           $portrait-count: 1) {
+  display: flex;
+  margin: 0 (-$gap / 3);
+
+  @if $vcenter {
+    align-items: center;
+  }
+
+  @if $hcenter {
+    justify-content: center;
+  } @else {
+    justify-content: space-between;
+  }
+
+  .col {
+    margin-bottom: $gap;
+    padding: 0 $gap / 2;
+
+    @if $col-stretch {
+      flex: 1;
+    } @else {
+      flex: 0 1 percentage(1/$desktop-count);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    flex-flow: row wrap;
+    margin: 0 ((-$gap / 2) + 10);
+
+    .col {
+      flex: 0 1 percentage(1/$tablet-count);
+      margin-bottom: $gap-btm;
+      margin-right: 0;
+      padding: 0 $gap / 2;
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet-portrait) {
+    flex-flow: row wrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+
+    .col {
+      flex: 0 1 percentage(1/$landscape-count);
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    flex-flow: row wrap;
+
+    .col {
+      flex: 0 1 percentage(1/$portrait-count);
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@mixin css-checkmark-standalone($width, $height, $border-width, $bg, $left, $top) {
+  &:after {
+    @extend %center-checkmark;
+    width: $width;
+    height: $height;
+    border: solid $bg;
+    border-width: 0 $border-width $border-width 0;
+    transform: rotate(45deg);
+    margin: 0;
+    left: $left;
+    top: $top;
+    bottom: auto;
+  }
+}
+
+@mixin circle-icon($size) {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  border-radius: 50%;
+}
+
+@mixin font($size) {
+  font-size: $size;
+
+  @include max-width(1440px) {
+    font-size: $size * 0.75;
+  }
+
+  @include max-width(1024px) {
+    font-size: $size + 2;
+  }
+}
+
+@mixin compact-font($default, $compact) {
+  font-size: $default;
+
+  @media (max-width: 1440px) {
+    font-size: $compact;
+  }
+
+  @include max-width(1024px) {
+    font-size: $compact + 2;
+  }
+}
+
+@mixin cf($default, $compact) {
+  font-size: $default * 0.8;
+
+  @media (max-width: 1440px) {
+    font-size: $compact;
+  }
+
+  @include max-width(1024px) {
+    font-size: $compact + 2;
+  }
+}
+
+@mixin cmb($default, $compact) {
+  margin-bottom: $default * 0.8;
+
+  @media (max-width: 1440px) {
+    margin-bottom: $compact;
+  }
+}
+
+@mixin cmt($default, $compact) {
+  margin-top: $default * 0.8;
+
+  @media (max-width: 1440px) {
+    margin-top: $compact;
+  }
+}
+
+@mixin cmr($default, $compact) {
+  margin-right: $default * 0.8;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: 1440px) {
+    margin-right: $compact;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@mixin compact-padding($default-vert, $default-side, $compact-vert, $compact-side) {
+  padding: ($default-vert * 0.65) ($default-side * 0.65);
+
+  @media (max-width: 1440px) {
+    padding: $compact-vert $compact-side;
+  }
+}
+
+%no-text-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+%center-checkmark {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}

@@ -1,0 +1,307 @@
+$tab-color: #d3d3d3;
+
+.tabs {
+  display: flex;
+  align-items: center;
+
+  .tab-item {
+    padding: 17px 10px;
+    color: $tab-color;
+    position: relative;
+    @include cf(24px, 16px);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    margin-top: auto;
+    box-shadow: none;
+
+    @include max-width($tablet) {
+      color: #c5c5c5;
+    }
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      opacity: 0;
+      bottom: -1px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      height: 3px;
+      transition: all 200ms ease;
+      transform: scale(0);
+      background-color: $tab-color;
+    }
+
+    &.active {
+      color: $green;
+
+      &:after {
+        background-color: $green;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    &:hover {
+      color: $icon-active;
+    }
+  }
+
+  &.city-tour-tabs {
+    margin-top: 30px;
+    transition: margin-top 200ms ease;
+
+    .tab-item {
+      @include cmr(22px, 13px);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+
+
+    @include max-width($tablet-portrait) {
+      .tab-item {
+        margin-right: 0;
+      }
+      a{
+        color: #909090;
+      }
+    }
+
+    @include max-width($mobile) {
+      align-items: center;
+
+      .tab-item {
+        padding: 10px;
+        font-size: 17px;
+        display: block;
+        width: 100%;
+      }
+    }
+
+    @include collapse($mobile, 0);
+  }
+
+  &.outlined {
+    margin-top: 0;
+    justify-content: center;
+    border-bottom: 1px solid #dbe0e6;
+
+    .tab-item {
+      text-transform: none;
+      @include compact-font(18px, 15px);
+      @include cmr(70px, 42px);
+      @include compact-padding(26px, 20px, 17px, 13px);
+    }
+
+    @include max-width($tablet-portrait) {
+      .tab-item {
+        margin-right: 0;
+      }
+    }
+
+    @include max-width($mobile) {
+      align-items: center;
+
+      .tab-item {
+        padding: 10px;
+        font-size: 14px;
+        display: block;
+        width: 100%;
+        font-size: 20px;
+      }
+    }
+
+    @include collapse($mobile, 0);
+  }
+
+  &.compact {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    animation: citytours 800ms ease;
+    z-index: 15;
+    background-color: #fff;
+  }
+
+  &.centered {
+    border-bottom: 1px solid #dbe0e6;
+    justify-content: center;
+  }
+
+  &.with-icon {
+    display: flex;
+
+    .tab-item {
+      display: flex;
+      text-align: center;
+      flex: 1;
+      flex-direction: column;
+      margin-right: 0 !important;
+      padding-left: 35px;
+      padding-right: 35px;
+      border-bottom: 2px solid #e4e7eb;
+      color: #d8dde1;
+      align-items: center;
+      position: relative;
+
+      @include min-width(1024px) {
+        padding-top: 50px;
+      }
+
+      .ic {
+        display: none;
+        width: 34px;
+        margin-bottom: 12px;
+
+        @include min-width(1024px) {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          top: 4px;
+        }
+      }
+
+      &.active {
+        color: $brand-green;
+
+        .icon {
+          display: none;
+        }
+
+        .ic {
+          display: inline-block;
+        }
+      }
+
+      &:after {
+        height: 2px;
+        bottom: -2px;
+      }
+
+      &:hover {
+        color: $brand-green;
+
+        .icon {
+          display: none;
+        }
+
+        .ic {
+          display: inline-block;
+        }
+      }
+
+      .icon {
+        margin-bottom: 12px;
+        color: $tab-color;
+        font-size: 34px;
+
+        @include min-width(1024px) {
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          top: 4px;
+        }
+
+        &.icon-planning {
+          position: relative;
+          right: 14px;
+        }
+      }
+
+      @include max-width($tablet) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      @include max-width($tablet-portrait) {
+        width: 100%;
+        position: relative;
+        text-align: left;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        .icon,
+        .ic {
+          margin-bottom: 0;
+          margin-right: 14px;
+        }
+      }
+    }
+
+    @include collapse($tablet-portrait, 0);
+  }
+}
+
+.tab-content {
+  @include cmt(80px, 50px);
+
+  @include max-width($mobile) {
+    margin-top: 13px;
+  }
+}
+
+.vertical-tabs {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.vertical-tab {
+  @include compact-padding(28px, 20px, 17px, 13px);
+  cursor: pointer;
+  color: $label-grey;
+  @include compact-font(24px, 18px);
+  display: flex;
+  align-items: center;
+  transition: all 200ms ease;
+  cursor: pointer;
+  @include active(9px);
+
+  .tab-circle {
+    @include circle(46px);
+    background-color: #fff;
+    border: 1px solid #d6dcde;
+    @include compact-font(24px, 18px);
+    color: #6c7985;
+    margin-right: 26px;
+    transition: all 200ms ease;
+
+    @include max-width(1440px) {
+      @include circle(38px)
+    }
+  }
+
+  &.active {
+    background-color: $brand-green;
+    color: #fff;
+
+    .tab-circle {
+      color: #fff;
+      border-color: $brand-green;
+      color: $brand-green;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &:hover {
+    color: $brand-green;
+
+    .tab-circle {
+      border-color: $brand-green;
+      color: $brand-green;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+
+	&.rounded {
+		border-radius: 50%;
+	}
+
+	&.bordered {
+		border-radius: 2px;
+		border: 2px solid #ccc;
+	}
+
+	&.centered {
+		margin: 0 auto;
+	}
+}
+
+html {
+	font-size: 62.5%;
+
+	@include max-width($tablet) {
+		font-size: 31.25%;
+	}
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+.hide-tablet {
+	@include max-width($tablet) {
+		display: none;
+	}
+}
+
+.show-tablet {
+	@include min-width($desktop) {
+		display: none;
+	}
+}
+
+.hide-portrait {
+	@include max-width($portrait) {
+		display: none;
+	}
+}

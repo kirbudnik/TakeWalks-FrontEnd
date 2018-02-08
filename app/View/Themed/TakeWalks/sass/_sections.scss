@@ -1,0 +1,369 @@
+$section-padding: 42px 85px 40px 52px;
+
+section {
+  padding: 80px 10px;
+
+  &.grey {
+    background-color: #f7f9fa;
+  }
+
+  &.bordered {
+    border-bottom: 1px solid $sep-border;
+  }
+
+  &.notes {
+    @include compact-padding(140px, 20%, 100px, 15%);
+  }
+
+  &.compact {
+    @include compact-padding(50px, 10px, 38px, 10px);
+
+    &.mobile-compact {
+      padding-bottom: 0 !important;
+    }
+  }
+
+  @include max-width($tablet) {
+    padding-top: 45px;
+    padding-bottom: 75px;
+  }
+
+  @include max-width($tablet-portrait) {
+    padding-top: 35px;
+    padding-bottom: 55px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @extend %mobile-vertical;
+
+  &.contact-section {
+    @include max-width($mobile) {
+      padding-bottom: 25px !important;
+    }
+  }
+}
+
+.plan-trip-wrap {
+  display: flex;
+  align-items: center;
+  width: 92%;
+  margin-left: auto;
+
+  .section-title {
+    @include cmr(90px, 65px);
+    max-width: 490px;
+
+    @include max-width($compact) {
+      min-width: 310px;
+      max-width: 360px;
+    }
+
+    @include max-width($tablet-portrait) {
+      min-width: 0;
+      max-width: none;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
+
+  @include max-width($tablet-portrait) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  @include collapse($tablet-portrait, 15px);
+}
+
+.plan-img {
+  margin-left: auto;
+  width: 600px;
+  position: relative;
+  height: 500px;
+  padding: 40px;
+
+  img {
+    position: absolute;
+
+    &.top-right {
+      right: -60px;
+      top: 0;
+      opacity: 0.15;
+    }
+
+    &.bottom-left {
+      bottom: 0;
+      left: -20px;
+      opacity: 0.15;
+    }
+
+    &.center {
+      top: 20px;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      margin: auto;
+      z-index: 10;
+    }
+  }
+
+  @include max-width($compact) {
+    width: 400px;
+    height: 320px;
+    padding: 20px;
+
+    img {
+      &.top-right {
+        right: -40px;
+      }
+
+      &.bottom-left {
+        left: 0;
+      }
+    }
+  }
+
+  @include max-width(640px) {
+    width: 300px;
+    height: 250px;
+    margin-left: 0;
+  }
+}
+
+.sustainable-travel {
+  @extend %v-c;
+  position: relative;
+
+  .section-title {
+    margin-bottom: 0;
+  }
+
+  .text {
+    max-width: 40%;
+    background-color: #fff;
+    box-shadow: 0px 26px 39px 0px rgba( 0, 0, 0, .1 );
+    padding: 65px 40px 55px;
+    position: absolute;
+  }
+
+  .img {
+    width: 80%;
+    margin-left: auto;
+  }
+
+  .green-circle {
+    position: absolute;
+    top: -55px;
+    left: 40px;
+  }
+
+  @include max-width($compact) {
+    .text {
+      max-width: 50%;
+      padding-top: 55px;
+      padding-bottom: 45px;
+    }
+
+    .section-title {
+      h2 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @include max-width($tablet-portrait) {
+    display: block;
+
+    .text {
+      position: static;
+      width: 100%;
+      max-width: none;
+      margin-bottom: 15px;
+      padding-bottom: 30px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .img {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+.partner-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+
+  div {
+    flex-basis: 25%;
+    padding: 10px 15px;
+
+    @include min-width(1440px) {
+      flex: 1;
+    }
+  }
+
+  @include max-width($tablet) {
+    div {
+      flex-basis: 25%;
+      text-align: center;
+      margin-bottom: 10px;
+
+      img {
+        display: inline-block;
+      }
+    }
+  }
+
+  @include max-width($mobile) {
+    div {
+      flex-basis: 50%;
+    }
+  }
+}
+
+.contact-section {
+  padding-bottom: 0;
+
+  p {
+    width: 80%;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  @include max-width($tablet-portrait) {
+    p {
+      width: 100%;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+}
+
+.last-section {
+  padding: 0;
+  padding-bottom: 80px;
+
+  @include max-width(1440px) {
+    padding-bottom: 80px;
+  }
+
+  @include max-width($tablet) {
+    padding-bottom: 70px;
+  }
+}
+
+.city-description-box {
+  &.notes {
+    padding-left: 20%;
+
+    @include min-width($tablet) {
+      padding: 70px 15px 80px;
+      padding-left: 15px;
+
+      .descr {
+        font-size: 20px;
+      }
+
+      .section-title {
+        margin-bottom: 0;
+      }
+    }
+
+    @include max-width($tablet-portrait) {
+      padding: $mobile-section-padding !important;
+
+      .section-title {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.section-sep-heading {
+  @include compact-padding(48px, 0, 24px, 0);
+  background-color: #f7f9fa;
+  border-top: 1px solid $sep-lighter;
+  border-bottom: 1px solid $sep-lighter;
+
+  .container {
+    @extend %v-c;
+  }
+
+  .heading {
+    margin: 0;
+    margin-top: 9px;
+    @include cf(50px, 36px);
+    font-weight: 400;
+    line-height: 1;
+
+    &.small {
+      @include cf(36px, 30px);
+    }
+  }
+
+  .ic {
+    margin-right: 20px;
+  }
+
+  .icon {
+    font-size: 50px;
+    color: $brand-green;
+    margin-right: 20px;
+
+    @include max-width(1440px) {
+      font-size: 38px;
+    }
+  }
+}
+
+.icon-big {
+  @include icon-size(42px);
+  @include cmb(34px, 20px);
+
+  @include max-width(1440px) {
+    @include icon-size(34px);
+  }
+}
+
+section#upcoming-tours{
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  @include max-width($tablet-portrait) {
+    padding-top: 35px;
+    padding-bottom: 55px;
+  }
+}
+
+section#browseTours{
+  padding-bottom: 160px;
+}
+
+section#visitingNotes{
+  padding-top: 75px;
+  padding-bottom: 160px;
+  @include max-width($tablet-portrait){
+    .descr{
+      font-size: 20px;
+    }
+  }
+}
+
+section#faq{
+  padding-bottom: 160px;
+
+  @include max-width($tablet-portrait) {
+    padding-top: 0 !important;
+  }
+}

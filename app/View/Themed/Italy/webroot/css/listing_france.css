@@ -1,0 +1,80 @@
+/* ----------------------------- */
+/*  FRANCE */
+/*  ----------------------------- */
+
+.france .form-b h1,
+.france .form-b h2 {
+    background: #22408c;
+}
+
+.france .form-b h1:after,
+.france .form-b h2:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 19px 0 19px;
+    border-color: #22408c transparent transparent transparent;
+    background: none;
+}
+
+.france .form-b .reset a:after {
+    display: none;
+}
+
+#top h1 a { display: block; overflow: hidden; position: relative; z-index: 2; width: 250px; height: 100%; background: url(/theme/Italy/img/logos/france_logo.png) no-repeat; background-size: contain; text-indent: -3000em; }
+#nav li.currency select{ outline: none; background: #fff; color: #22408c; border: 1px solid #22408c; font-size: .9rem; margin-top:-5px;}
+.flashMessage.small{
+    background:  #22408c;
+}
+#top-fixed { position: fixed; left: 0; top: -38px; z-index: 11; width: 100%; height: 38px; background: #22408c; }
+#top-fixed nav ul li.cart a { position: relative; top: 6px; width: 26px; height: 26px; padding: 0; border-radius: 100px; background: #fff; line-height: 24px; text-align: center; color: #22408c; }
+#breadcrumbs p { position: absolute; min-height: 145px; right: 0; top: 0; bottom: 0; width: 228px; margin: 0; padding: 15px 30px 0 90px; background: #22408c; color: #fff; font-size: 1.146em; }
+#featured p.link-a.b a:hover { background: #fff; color: #22408c; }
+#footer { position: relative; z-index: 5; width: 980px; margin: 0 auto; padding: 68px 0 0; background: #22408c; color: #fff; }
+#footer:before { content: ""; display: block; position: absolute; left: -1000em; top: 0; z-index: 1; width: 3000em; height: 100%; background: #22408c; }
+#footer h1, #footer h2, #footer h3 { margin: 0 0 13px; padding: 0 0 17px; border-bottom: 1px solid #fff; color: #fff; font-size: 2.6em; }
+#footer .social-a { margin-top: 19px; border-bottom: 1px solid #fff; }
+#footer .error-message{ display:none; font-size: 1.5em;z-index: 2;background: #CCC; color: #22408c; padding: 3px 0 3px 9px; }
+#footer form button:hover { background: #fff; color: #22408c; }
+.gallery-a li .title { display: block; margin: 0 0 9px; color: #22408c; font-size: 1.154em; font-family: 'Constantia'; text-transform: uppercase; }
+.price-a { color: #22408c; font-size: 48px; font-family: 'Constantia'; line-height: 1; }
+h1, h2, h3, h4, h5, h6 { color: #22408c; font-family: 'Constantia'; font-weight: 400; line-height: 1.175; text-transform: uppercase; }
+.scheme-d { margin-bottom: 17px; color: #22408c; font-size: 2.354em; line-height: 1.1; }
+a { background: none; color: #22408c; text-decoration: none; cursor: pointer; } /*---*/ a span { cursor: pointer; }
+.link-a a, a.link-a { display: -moz-inline-stack; display: inline-block; position: relative; height: 35px; padding: 0 18px; border: 1px solid #22408c; color: #22408c; line-height: 35px; text-transform: uppercase; text-decoration: none; }
+.link-a a:hover, a.link-a:hover { background: #22408c; color: #fff; }
+.link-a i { position: relative; top: 1px; margin-right: 2px; color: #22408c; font-size: 16.67px; }
+.list-a { position: relative; list-style: none; width: auto; margin: 0 0 50px -23px; padding: 36px 0 0; background: #e4e4e1; color: #22408c; font-weight: 300; }
+.list-a > .fit-a { display: block; position: absolute; left: 50%; top: 100%; margin: 0 0 0 -16.5px; width: 0; height: 0; border-style: solid; border-width: 20px 19px 0 19px; border-color: #22408c transparent transparent transparent; background: none; }
+.list-a.a { padding-top: 40px; background: #22408c; color: #fff; line-height: 1.2; }
+.list-a.a:before { background: #22408c; }
+.list-a.a li { padding: 0 0 41px; border-left: 23px solid #22408c; font-size: 1.875em; }
+.list-a.a li .title:before { content: ""; display: block; position: absolute; left: 50%; bottom: 0; width: 140px; height: 1px; margin: 0 0 0 -70px; background: #989898; }
+#root .list-g li { position: relative; min-height: 78px; margin: 0; padding: 11px 0 10px 88px; border-top: 2px solid #22408c; font-size: 20.85px; }
+#root .list-h li { margin: 0; padding: 0; border-bottom: 2px solid #22408c; font-size: 20.85px; }
+#root .list-i li { position: relative; min-height: 95px; margin: 0; padding: 4px 0 0 88px; border-top: 2px solid #22408c; font-size: 13.56px; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { display: -moz-inline-stack; display: inline-block; overflow: hidden; position: relative; height: 48px; padding: 0 26px; border: 0; background: #22408c; color: #fff; font-size: 18.75px; font-family: 'Constantia'; text-transform: uppercase; text-align: center; }
+::selection { background: #22408c; color: #fff; text-shadow: none; }
+::-moz-selection { background: #22408c; color: #fff; text-shadow: none; }
+textarea:active {
+    border-color: #22408c;
+}
+.custom-radio input[type="radio"]:checked + label span{
+    background-color: #22408c;
+}
+.custom-checkboxes input[type=checkbox]:checked + label:before {
+    color: #22408c;
+}
+#content .transfers-intro-list li .bullet {
+    color: #22408c;
+}
+#content .transfer-routes-list .city-transfer {
+    color: #22408c;
+}
+.transfer-routes .transfers-list .city-transfer {
+    color: #22408c;
+}
+.faq-hero{
+    background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25) ), url(/theme/Italy/img/france_landing.jpg);
+    background-size: cover;
+}

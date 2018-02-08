@@ -1,0 +1,148 @@
+.login-page {
+  height: calc(100vh - 85px);
+  position: relative;
+  background-image: linear-gradient( rgba(68, 78, 83, 0.83), rgba(68, 78, 83, 0.83)),
+                    url(#{$ap}/hero/login.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: left;
+  @extend %v-c;
+  justify-content: flex-start;
+}
+
+.login-page-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 90px;
+
+  .icon {
+    font-size: 28px;
+    color: #fff;
+  }
+
+  h2 {
+    margin: 0;
+    @include cf(60px, 44px);
+    color: #fff;
+    font-weight: 300;
+  }
+
+  h5 {
+    margin: 18px 0 8px;
+  }
+}
+
+.login-sidebar {
+  height: 100%;
+  padding: 0 30px 25px;
+  width: 35%;
+  max-width: 450px;
+  min-width: 320px;
+  z-index: 5;
+  min-height: 625px;
+  transition: opacity 300ms ease,
+              pointer-events 300ms ease,
+              transform 300ms ease;
+
+  .sidebar-heading {
+    padding-top: 35px;
+    border-bottom: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+    padding-right: 0;
+
+    &.less-bottom {
+      margin-bottom: 15px;
+    }
+
+    // &.signup-heading {
+    //   min-height: 83px;
+    //   h1 {
+    //     min-height: 36px;
+    //   }
+    // }
+  }
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+  }
+
+  .close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+  }
+
+  .sidebar-stick-bottom {
+    margin-top: auto;
+    text-align: center;
+  }
+
+  @include max-width($tablet-portrait) {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    min-height: 100%;
+  }
+}
+.login-sidebar.login-sidebar-register{
+  min-height: 810px;
+}
+.login-sidebar-buttons {
+  @include cmt(44px, 32px);
+  padding: 0 20px;
+
+  p.or {
+    @include cmt(46px, 29px);
+    @include cmb(34px, 19px);
+  }
+
+  .btn:not(.green) {
+    margin-bottom: 22px;
+  }
+
+  .btn {
+    display: block;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.sidebar-message {
+  @include cmt(110px, 80px);
+  text-align: center;
+
+  .icon {
+    font-size: 55px;
+    color: $green;
+  }
+
+  .sidebar-heading {
+    margin-bottom: 0;
+    text-align: center;
+
+    h1 {
+      width: 100%;
+    }
+  }
+}
+
+.close-sidebar {
+  .icon-close {
+    padding: 6px;
+    transition: color 200ms ease;
+    cursor: pointer;
+
+    &:hover {
+      color: $brand-purple;
+    }
+  }
+}

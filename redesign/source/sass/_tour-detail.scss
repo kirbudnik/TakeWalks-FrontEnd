@@ -1,0 +1,291 @@
+.tour-info {
+	background-color: $bg-rose-grey;
+	padding: 2.5rem 0 6.5rem;
+
+	.text {
+		margin-top: 1rem;
+		margin-bottom: 3rem;
+		display: flex;
+		width: 100%;
+		align-items: center;
+
+		.price-box-wrap {
+			margin-left: auto;
+		}
+
+		.text-wrap {
+			margin-right: 20px;
+		}
+
+		@include max-width($tablet) {
+			flex-direction: column;
+
+			.price-box-wrap {
+				margin-top: 25px;
+				width: 100%;
+				padding: 10px;
+				border-radius: 3px;
+
+				p {
+					margin: 0;
+				}
+
+				.price-number {
+					font-size: 35px;
+					margin: 10px 0;
+				}
+			}
+		}
+	}
+}
+
+.price-box-wrap {
+	padding: 20px 10px;
+	min-width: 270px;
+	text-align: center;
+	color: $pure-white;
+	background-color: $bg-blue;
+	
+	p {
+		text-transform: uppercase;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
+	.price-number {
+		font-size: 64px;
+		margin: 10px 0;
+	}
+}
+
+.tour-header {
+	margin-bottom: 1.2rem;
+}
+
+.tour-description {
+	font-size: 17px;
+
+	b {
+		font-weight: 800;
+	}
+
+	span {
+		font-weight: 800;
+		color: $typo-rose;
+		text-transform: uppercase;
+	}
+}
+
+.breadcrumbs {
+	font-family: 'Open Sans';
+
+	a {
+		color: #6d6e71;
+		font-size: 12px;
+		display: inline-block;
+		@include hover(darken(#6d6e71, 22%), 200);
+
+		&:after {
+			display: inline-block;
+			padding-left: 6px;
+			padding-right: 3px;
+			content: '>';
+			text-align: center;
+		}
+
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+.tour-detail-content {
+	.grid-container {
+		display: flex;
+		
+		main {
+			flex: 1;
+		}
+		
+		aside {
+			width: 300px;
+			margin-left: 22px;
+		}
+
+		@include max-width($desktop) {
+			flex-direction: column;
+
+			aside {
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
+
+.tour-route {
+	@include flex-container(30px, $center: false);
+	align-items: flex-start;
+
+	@include max-width($portrait) {
+		flex-direction: column;
+
+		> * {
+			margin-right: 0;
+			width: 100%;
+			
+			&:first-child {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.gmap-wrapper {
+	height: 440px;
+	margin: 4rem 0 20px;
+
+	@include max-width($tablet) {
+		height: 220px;
+	}
+}
+
+#gmap {
+	height: 100%;
+}
+
+.tour-reviews {
+	padding: 2.5rem 2.8rem 4rem;
+	text-align: center;
+	background-color: $bg-rose-grey;
+	width: 628px;
+
+
+	.body,
+	.author {
+		width: 75%;
+		margin: 0 auto;
+		text-align: left;
+	}
+
+	.author {
+		color: $typo-blue;
+		margin-top: 3.5rem;
+
+		span {
+			font-size: 16px;
+		}
+	}
+
+	@include max-width($tablet) {
+		width: 100%;
+
+		.body,
+		.author {
+			width: 100%;
+		}
+	}
+}
+
+.tour-book {
+	margin-top: 3.5rem;
+}
+
+.aside-content {
+	padding: 20px 20px 5px;
+	background-color: #fcfcfb;
+	border: 1px solid #e0ded8;
+	border-top: none;
+
+	.book-item-block {
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+.book-item-block {
+	border-bottom: 1px solid #e0ded8;
+
+	.item-header {
+		font-family: 'Constantia';
+		padding: 14px 13px;
+		font-weight: 400;
+		font-size: 17px;
+	}
+
+	.item-content {
+		padding: 0 13px;
+		@extend %v-c;
+		font-family: 'Open Sans';
+
+		> * {
+			margin-bottom: 18px;
+		}
+
+		&-price {
+			margin-left: auto;
+			font-weight: 600;
+			padding-right: 8px;
+
+			&.free {
+				color: $typo-rose;
+			}
+		}
+
+		&-person {
+			.age {
+				color: $typo-grey-light;
+				font-size: 13px;
+			}
+		}
+
+		&.book {
+			margin-top: 3rem;
+			flex-direction: column;
+
+			p {
+				font-size: $typo-anchor-fs;
+			}
+		}
+	}
+
+	&.nav-tabs {
+		border-bottom: none;
+
+		.nav-tab {
+			display: inline-block;
+			padding: 8px 10px;
+			cursor: pointer;
+			border: 1px solid;
+			border-color: transparent;
+			border-top-color: transparent;
+			border-bottom: none;
+			transition: color 340ms ease,
+						border-color 340ms ease,
+						border-top-color 340ms ease;
+			
+			&.active {
+				border-color: #e0ded8;
+				border-bottom-color: transparent;
+				border-top-color: #506db1;
+				background-color: $pure-white;
+			}
+
+			&:hover {
+				&:not(.active) {
+					color: $typo-rose;
+				}
+			}
+		}
+	}
+}
+
+.tour-detail-slider {
+	.rsOverflow {
+		@include min-width($desktop) {
+			max-width: 650px;
+		}
+	}
+}

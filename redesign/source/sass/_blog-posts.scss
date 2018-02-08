@@ -1,0 +1,28 @@
+.blog-posts {
+	margin-top: 12px;
+
+	.post {
+		display: flex;
+		padding: 26px 15px 26px 0;
+		border-bottom: 2px solid #ccc;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	.image {
+		width: 96px;
+		height: 96px;
+		margin-right: 20px;
+	}
+
+	.text {
+		flex: 1;
+	}
+
+	.date {
+		display: block;
+		margin-bottom: 16px;
+	}
+}

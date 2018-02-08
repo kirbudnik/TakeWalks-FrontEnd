@@ -1,0 +1,60 @@
+.hide-tablet {
+  @include max-width($tablet) {
+    display: none !important;
+  }
+}
+
+.hide-mobile {
+  @include max-width($mobile) {
+    display: none !important;
+  }
+}
+
+.hide-desktop {
+  display: block !important;
+
+  @include min-width($tablet) {
+    display: none !important;
+  }
+}
+
+%all-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%v-c {
+  display: flex;
+  align-items: center;
+}
+
+%pseudo {
+  display: block;
+  content: '';
+  position: absolute;
+}
+
+%hidden {
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 200ms ease,
+              z-index 200ms ease,
+              transform 300ms ease;
+
+
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 5;
+    transform: translateY(0);
+  }
+}
+
+%mobile-vertical {
+  @include max-width($tablet-portrait) {
+    padding-top: 35px !important;
+    padding-bottom: 55px !important;
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "require": {
+        "geoip2/geoip2": "~2.0",
+        "bolandish/instagram-grabber": "^1.0",
+        "abraham/twitteroauth": "^0.6.4",
+        "kzykhys/ciconia": "1.0.0",
+        "aws/aws-sdk-php": "^3.25"
+    },
+    "config": {
+        "vendor-dir": "app/Vendor"
+    },
+    "require-dev": {
+        "cakephp/debug_kit": "^2.2.0"
+    }
+}

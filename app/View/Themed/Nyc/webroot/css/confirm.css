@@ -1,0 +1,183 @@
+@import url('datepick.css'); /* Calendar styles */
+
+/* Sidebar */
+aside {
+	padding: 4rem 0;
+}
+@media (min-width: 53rem){
+	aside {
+		width: 24rem;
+		float: left;
+	}
+}
+aside > div {
+	background: #FAFAFA;
+	padding: 0.5rem;
+}
+
+aside > div .close {
+	float: right;
+	cursor: pointer;
+	margin-top: -0.6rem;
+}
+
+aside h3 {
+	color: #338DFB;
+	font-weight: 800;
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+	margin-bottom: 0;
+	line-height: 1.2;
+}
+aside .timeslot {
+	color: #676866;
+	padding: 0 0 0.5rem;
+}
+
+aside .ticketsSummary li {
+	padding: 0.5rem 0 0.5rem 0.5rem;
+	clear: right;
+	border-top: 1px solid #EEE;
+}
+aside .ticketsSummary li:first-child {
+	border-top: none;
+}
+aside .ticketsSummary li.subtotal {
+	border-top: 0.2rem solid #ddd;
+	padding: 0 0 0 0.5rem;
+	line-height: 2;
+}
+aside .ticketsSummary span {
+	float: right;
+	padding: 0 0.5rem;
+}
+aside .ticketsSummary span.free {
+	color: #46cb39;
+}
+aside .ticketsSummary li.subtotal span {
+	background: #ddd;
+	font-weight: 600;
+}
+
+aside .ticketsSummary.total li:last-child {
+	border-top: 0.2rem solid #338dfb;
+}
+aside .ticketsSummary.total li:last-child span {
+	background: #338dfb;
+	color: white;
+}
+
+/* Main text */
+main {
+	padding: 2rem 0;
+	border-bottom: 1px solid #EEE;
+}
+@media (min-width: 53rem){
+	main {
+		margin-left: 26rem;
+		padding-left: 2rem;
+	}
+}
+main h1 {
+	color: #338dfb;
+	font-weight: 800;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	margin: 1.2rem 0 1rem;
+	border-bottom: 1px solid #EEE;
+}
+main h3 {
+	color: #338dfb;
+	font-weight: 800;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+main p, main form, main table {
+	margin-bottom: 1rem;
+}
+
+main table {
+	line-height: 2;
+}
+main table td {
+	border-bottom: 1px solid #EEE;
+	padding: 0 0.5rem;
+}
+main table tr:hover td {
+	background: #EEE;
+}
+main table td:first-child {
+	font-weight: 600;
+}
+
+/* Hotel form */
+main legend {
+	font-size: 1.2rem;
+	font-weight: 700;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	margin-bottom: 0.5rem;
+	border-bottom: 1px solid #EEE;
+	width: 100%;
+}
+main form > div {
+	text-align: center;
+	margin: 1rem 0;
+}
+main label,
+main input[type="submit"] {
+	display: block;
+	margin: 0.5rem 0;
+	width: 48%;
+	float: left;
+}
+main fieldset > label:nth-child(even) {
+	margin-right: 4%;
+}
+
+main .startDate,
+main .endDate {
+	background: white url('../img/calendar.png') no-repeat right 1rem center;
+}
+.datepick {
+	border: 0.3rem solid #338dfb;
+}
+.datepick td a:hover,
+.datepick td a:focus {
+	cursor: pointer;
+	color: white;
+	background: #F545A3;
+}
+.datepick:after { bottom: 100%; left: 2rem; border: solid transparent; content: ""; height: 0; width: 0; position: absolute; pointer-events: none; border-color: transparent; border-bottom-color: #338dfb; border-width: 0.8rem; }
+.endDatePick.datepick:after { left: auto; right: 2rem; }
+
+main fieldset a {
+	clear: both;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	text-transform: none;
+	float: right;
+	padding: 0.5rem 1rem;
+	margin: 0 0 0.5rem;
+}
+
+
+main form > label {
+	background: #FAFAFA;
+	padding: 0.5rem;
+	margin: 1rem 0;
+	clear: both;
+	width: 100%;
+}
+
+main input[type="submit"] {
+	margin: 1rem auto 0;
+	padding: 1rem 2rem;
+	float: none;
+	font-size: 1.5rem;
+    width: 100%;
+}
+@media(min-width: 53rem) {
+    main input[type="submit"] {
+        width: 48%;
+    }
+}
+main input[disabled].pink.button { background-color: #EEE; border-color: #AAA; color: #555; }
+main input[disabled].pink.button:hover, 
+main input[disabled].pink.button:focus { outline: none; box-shadow: none; }
+main input[disabled].pink.button:active { box-shadow: none; }

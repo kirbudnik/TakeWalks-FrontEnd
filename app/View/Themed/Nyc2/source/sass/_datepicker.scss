@@ -1,0 +1,223 @@
+/*! Modules --------- */
+.ui-datepicker th, .ui-datepicker td {
+  font-size: 1em;
+}
+
+/*! Helpers --------- */
+.ui-datepicker * {
+  transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+}
+
+/* Datepickers */
+/* ---------------------------------- */
+.ui-datepicker th, .ui-datepicker td {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: 'Constantia';
+}
+
+.ui-datepicker-unselectable {
+  color: #363834;
+
+  a {
+    cursor: default;
+  }
+}
+
+.ui-datepicker-today a {
+  color: #363834;
+}
+
+.ui-datepicker-title {
+  color: #363834;
+}
+
+.tour-book .ui-datepicker {
+  margin: 9px -15px 12px;
+  padding: 10px 13px 13px;
+  background: #b3a578;
+}
+
+.tour-book .ui-datepicker table {
+  margin: 0;
+  table-layout: fixed;
+}
+
+.tour-book .ui-datepicker-header {
+  position: relative;
+  padding: 0 0 6px;
+}
+
+.tour-book .ui-datepicker-title {
+  display: block;
+  padding: 0 20px;
+  font-size: 16.67px;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tour-book .ui-datepicker-prev, .tour-book .ui-datepicker-next {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 2px;
+  width: 13px;
+  height: 22px;
+  text-indent: -3000em;
+  text-align: left;
+  opacity: .5
+}
+
+.tour-book .ui-datepicker-prev {
+  left: 2px;
+  background: url(../img/icons/arrow-left-black.png);
+}
+
+.tour-book .ui-datepicker-next {
+  right: 2px;
+  background: url(../img/icons/arrow-right-black.png);
+}
+
+.tour-book .ui-datepicker-next::before {
+  content: "\f054";
+}
+
+.ui-datepicker-calendar th {
+  padding: 0;
+  border: 2px solid #b3a578;
+  color: #fff;
+  font-size: 8.33px;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ui-datepicker-calendar td {
+  padding: 0;
+  border: 2px solid #b3a578;
+  cursor: pointer;
+
+  a {
+    cursor: pointer;
+  }
+}
+
+.ui-datepicker-calendar td > * {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #d9d2bc;
+  text-align: center;
+}
+
+/* make the color of the current date none so it wouldn't stand out
+.ui-datepicker-calendar td.ui-datepicker-today > * { background: #cd604f; }
+*/
+.ui-datepicker-calendar td.sale a:after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: .5rem;
+  height: .5rem;
+  border-radius: .5rem;
+  background: #e74c3c;
+  bottom: -0.2rem;
+  right: -0.2rem;
+  border: 0.2rem solid white;
+  color: white;
+}
+
+.ui-datepicker-calendar td.sale a:hover:after {
+  content: 'Sale';
+  display: block;
+  width: 2rem;
+  height: auto;
+  border-radius: 0.5rem;
+  bottom: -1rem;
+  right: -1.8rem;
+  border: 0.2rem solid #FFF;
+  color: #FFF;
+  font-size: 0.7rem;
+  line-height: 1.2;
+  z-index: 4;
+  padding: 0.2rem 0;
+}
+
+.ui-datepicker-calendar td > .ui-state-active {
+  background: #a3cf64;
+}
+
+/** red dot indicating a sale for the date
+.ui-datepicker-calendar td > .ui-state-active:before { content: ""; display: block; position: absolute; right: -1px; bottom: -1px; width: 10px; height: 10px; border-radius: 20px; border: 2px solid #b2a67d; background: #f00; }
+*/
+.lt-ie9 .ui-datepicker-calendar td > .ui-state-active:before {
+  width: 15px;
+  height: 15px;
+  background: url(/theme/Italy/img/sprite-a.png) -271px -13px no-repeat;
+}
+
+.columns-a > aside > .tour-book {
+  margin-left: -12px;
+}
+
+/* datepicker */
+
+.tour-book .ui-datepicker-calendar thead th {
+  font-size: 8.33px;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.tour-book .ui-datepicker {
+  background: #fff;
+  border: 1px solid #eaeaea;
+}
+
+.ui-datepicker-calendar td, .ui-datepicker-calendar th {
+  border: none;
+  color: #A0A0A0;
+}
+
+.ui-datepicker-calendar td > * {
+  background: #FFF;
+  cursor: default;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ui-datepicker-calendar td > .ui-state-active {
+  background: #F545A3;
+  color: white
+}
+
+.ui-datepicker-calendar td > a:hover {
+  background: #338DFB;
+}
+
+.ui-datepicker-calendar td > a:active {
+  box-shadow: inset 0 0 9px rgba(0, 0, 0, .6)
+}
+
+.ui-datepicker-calendar td > a {
+  background: #F545A3;
+  color: #fff;
+  margin: 0 1px 1px 0;
+}
+
+.ui-datepicker-calendar tr > th > span {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: #D349A2;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.ui-datepicker-current-day > a {
+  background: #338DFB !important;
+}

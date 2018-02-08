@@ -1,0 +1,52 @@
+# User specific & automatically generated files #
+#################################################
+.htaccess
+/app/.htaccess
+/app/webroot/robots.txt
+/app/webroot/.htaccess
+/app/Config/database.php
+/app/tmp
+/lib/Cake/Console/Templates/skel/tmp/
+/plugins
+/vendors
+/build
+/dist
+/tags
+*/.idea/workspace.xml
+app/Vendor/bolandish
+app/Vendor
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+#Icon?
+ehthumbs.db
+Thumbs.db
+*.sw*
+.idea/*
+
+composer.lock
+Plugin
+/app/Plugin/*
+
+app/Config/*
+
+#redesign gitignores
+/redesign/node_modules
+/redesign/.sass-cache
+/app/View/Themed/Nyc2/node_modules
+/app/View/Themed/Nyc2/.sass-cache
+/app/View/Themed/TakeWalks/node_modules
+/app/View/Themed/TakeWalks/.sass-cache
+/webroot/css/app*
+/.env
+
+#TakeWalks build files
+/app/View/Themed/TakeWalks/webroot/css/app.css
+/app/View/Themed/TakeWalks/webroot/css/app.css.map
+/app/View/Themed/TakeWalks/webroot/fonts/webfont/
+/app/View/Themed/TakeWalks/sass/icons/icons.html
+/app/View/Themed/TakeWalks/sass/icons/_icons.scss

@@ -1,0 +1,177 @@
+.city-tours-header {
+  border-bottom: 1px solid #dbe0e6;
+
+  &.compact {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+    animation: citytours 800ms ease;
+
+    .city-tour-title {
+      padding-top: 10px;
+
+      h1 {
+        font-size: 36px;
+      }
+    }
+
+    .city-tour-tabs {
+      margin-top: 10px;
+    }
+
+    select {
+      height: 40px;
+      line-height: 40px;
+      font-size: 15px;
+
+      @include placeholder {
+        font-size: 15px;
+      }
+    }
+
+    .btn {
+      height: 40px;
+      line-height: 40px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .input-icon {
+      input {
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;
+
+        @include placeholder {
+          font-size: 15px;
+        }
+      }
+
+      .icon {
+        right: 12px;
+        width: 18px;
+        height: 18px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.city-tour-title {
+  display: flex;
+  align-items: center;
+  padding-top: 137px;
+  transition: padding-top 200ms ease;
+
+  @include min-width(1440px) {
+    padding-top: 147px;
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 400;
+    transition: font-size 200ms ease;
+
+    @include max-width($tablet) {
+      font-size: 44px;
+    }
+
+    @include max-width($tablet-portrait) {
+      font-size: 32px;
+    }
+  }
+
+  .city-tour-date {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    .input-icon {
+      margin-right: 25px;
+
+      &:first-child {
+        margin-right: 14px;
+      }
+    }
+
+    @include collapse($tablet-portrait, 16px);
+    @include max-width($tablet-portrait) {
+      margin-left: 0;
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      label {
+        display: block;
+        text-align: left;
+        width: 100%;
+      }
+
+      .input-icon {
+        margin-right: 0;
+        width: 100%;
+
+        &:first-child {
+          margin-right: 0;
+        }
+      }
+
+      select {
+        width: 100%;
+      }
+    }
+    .reset-calendar{
+      margin-left: 20px;
+    }
+  }
+
+  @include max-width($tablet) {
+    padding-top: 20px;
+  }
+
+  @include collapse($tablet-portrait, 15px);
+}
+
+.tour-list-section {
+  @include compact-padding(120px, 0, 60px, 0);
+  border-bottom: 1px solid #d8d8d8;
+
+  &.no-link {
+    padding-bottom: 0;
+  }
+
+  &.compact {
+    padding-top: 67px;
+    padding-bottom: 80px;
+
+    .tour-type-title {
+      text-align: left;
+    }
+  }
+
+  .standalone & {
+    padding-top: 55px;
+  }
+
+  @include max-width($tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .section-cta {
+    margin-top: 0;
+  }
+}
+
+.tour-type-title {
+  @include cmb(60px, 40px);
+  text-align: center;
+
+  p {
+    margin-top: 10px;
+  }
+}

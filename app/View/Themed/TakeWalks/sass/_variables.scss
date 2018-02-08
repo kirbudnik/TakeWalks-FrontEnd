@@ -1,0 +1,99 @@
+$ap: '/theme/TakeWalks/img';
+$ls: 0.03em;
+
+$light: 300;
+$med: 500;
+$semi: $med;
+$cor-semi: 600;
+$bold: 700;
+
+// Body
+$body-bg: #FFF;
+$font-family: 'Alegreya Sans', sans-serif;
+$heading-family: Delima;
+$line-height: 1.2;
+$text-color: #443D47;
+
+// Borders
+$container-border: #d4dcde;
+
+// Colors
+$brand-green: #57B69D;
+$brand-purple: #AF3756;
+$brand-blue: #42789a;
+$brand-green-saturated: #3ab977;
+$red: #d0021b;
+$orange: #f05819;
+$error-bg: #fef7f3;
+
+$black: #443D47;
+$green-border: #71C174;
+$select-highlight: $brand-green;
+$link-color: #929FB1;
+$circle-grey: #92A2B1;
+$green: $brand-green;
+$dd-caret-grey: #acb2b8;
+$input-border: #dfe6ee;
+$leftnav-bg-active: #2B2F3B;
+$orange: #f38226;
+$orange-tab: #f17e22;
+$darkblue: #37474f;
+$darkerblue: #443D47;
+$green-hl: $brand-green;
+$sep-border: #ececec;
+$grey-blue: #445964;
+$sep-lighter: #d9dde2;
+$black-light: #443D47;
+$label-grey: #67626B;
+$breadcrumbs-grey: #acb2b9;
+$bluegrey: $label-grey;
+
+// Icons
+$icon-active: $brand-green;
+$icon-orange: #FFA032;
+$icon-gradient-start: #32AE9C;
+$icon-gradient-end: #73C272;
+$icon-grey: #c5cbd3;
+
+// Dimensions
+$topnav-height: 93px;
+$leftnav-width: 120px;
+$logout-width: 90px;
+$select-height: 50px;
+$input-height: 50px;
+
+// dimensions - compact
+$topnav-height-compact: 73px;
+$leftnav-width-compact: 100px;
+$logout-width-compact: 65px;
+$select-height-compact: 45px;
+$btn-height-compact: 42px;
+$left-sidebar-width: 220px;
+$left-sidebar-width-compact: 160px;
+
+$home-tour-first-height: 380px;
+$home-tour-second-height: 270px;
+$home-tour-first-height-compact: 350px;
+$home-tour-second-height-compact: 250px;
+
+// dimensions - mobile
+$leftnav-width-mobile: 150px;
+$mobile-section-padding: 35px 15px 55px;
+
+// Font sizes
+$link-size: 14px;
+
+// Z indexes
+$topnav-z: 1000;
+$leftnav-z: 1000;
+
+$desktop: 1024px;
+$tablet: 1024px;
+$compact: 1440px;
+$tablet-portrait: 768px;
+$mobile: 640px;
+$portrait: 480px;
+
+// Cubic Beziers
+$cb-qck: cubic-bezier(0.23, 1, 0.32, 1);
+$cb-switch: cubic-bezier(.07,1.13,.68,.94);

@@ -1,0 +1,28 @@
+.module-e { position: relative; margin: 0 0 31px; padding: 30px 0 66px; background: #e4e4e1; }
+.module-e > * { position: relative;}
+.module-e:before { content: ""; display: block; position: absolute; left: -1000em; top: 0; z-index: 1; width: 3000em; height: 100%; background: #e4e4e1; }
+.module-e:after { content: ""; display: block; position: absolute; left: 50%; top: 100%; width: 31px; height: 16px; margin: 0 0 0 -15.5px; background: url(/theme/Italy/img/sprite-a.png) -261px -237px no-repeat; }
+
+.heading-a p { max-width: 620px; color: #601d0d; font-size: 1.563em; text-transform: uppercase; }
+.module-e > * { position: relative; z-index: 2; }
+
+#chooseBook{
+    font-size: 14px;
+    line-height: 33px;
+    color: #444;
+}
+#chooseBook select{
+    width: 200px;
+}
+
+#question{
+    display: none;
+}
+
+#question input{
+    width: 200px;
+}
+
+#question button{
+    margin-top: 14px;
+}
